@@ -5,22 +5,29 @@
 #include <string.h>
 
 #include "parameter.h"
+#include "varParam.h"
 
 #define	drand() ((double)(random()+1)/RAND_MAX-0.5)
 
 #define sq(x) ((x)*(x))
 
 /* global variables */
-int ite;          /* 試行回数 */
-double err;
-double sum[CTG];
-double sum_error[CTG];
-double 	i_lay[CTG][INPUT+1],
+ int ite;          /* 試行回数 */
+ double err;
+ double sum[CTG];
+ double sum_error[CTG];
+ double 	i_lay[CTG][INPUT+1],
+		h_lay[HIDDEN+1],
 		o_lay[OUTPUT],
 		teach[CTG][OUTPUT];
-double  test_pattern[INPUT+1],
+ double  test_pattern[INPUT+1],
 		correct[OUTPUT]; /* to check nn with test-pattern */
-
+ double	ih_w[INPUT+1][HIDDEN],
+		ho_w[HIDDEN+1][OUTPUT];
+ double	h_del[HIDDEN+1],
+		o_del[OUTPUT];
+ double  ih_dw[INPUT+1][HIDDEN],
+		ho_dw[HIDDEN+1][OUTPUT];
 
 extern double sigmoid(double s);
 extern void set_problem();
@@ -37,6 +44,7 @@ void terminate();
 
 int main(int argc, char **argv)
 {
+
   int	i,j;
   char buff[FGETS_LEN];
   char command;
@@ -51,15 +59,7 @@ int main(int argc, char **argv)
     random();
   }
 
-double h_lay[HIDDEN+1];
-
-double	ih_w[INPUT+1][HIDDEN],
-		ho_w[HIDDEN+1][OUTPUT];
-double	h_del[HIDDEN+1],
-		o_del[OUTPUT];
-double  ih_dw[INPUT+1][HIDDEN],
-		ho_dw[HIDDEN+1][OUTPUT];
-
+ 
   /* read & set test-case */
   set_problem();
   
@@ -96,14 +96,14 @@ double  ih_dw[INPUT+1][HIDDEN],
     //   h(help): ヘルプ
     switch( command ){
       case 'l': /* learning */
-	nn_learn(ih_dw,ho_dw,ih_w,h_lay,o_del,h_del,ho_w);
+	nn_learn();
 	break;
       case 'c': /* check with learned-pattern */
-	nn_check(ih_w,h_lay,ho_w);
+	nn_check();
 	break;
       case 'e': /* evaluation with other-pattern */
 	nn_read_test_pattern();
-	nn_eval(ih_w,h_lay,ho_w);
+	nn_eval();
 	break;
       case 'q': /* quit */
 	final_flag = 1;
@@ -124,7 +124,7 @@ double  ih_dw[INPUT+1][HIDDEN],
 }
 
 
-void nn_learn(double** ih_dw,double** ho_dw,double** ih_w,double* h_lay,double* o_del,double* h_del,double ** ho_w){
+void nn_learn(){
   int i, j, ctg;
   int start_ite;
 
@@ -181,7 +181,7 @@ void nn_learn(double** ih_dw,double** ho_dw,double** ih_w,double* h_lay,double* 
 }/* end of nn_learn() */
 
 
-void nn_check(double **ih_w,double *h_lay,double **ho_w){
+void nn_check(){
   int i, j, ctg;
 
   fprintf(stdout,"err=%lf, MIN_ERR=%lf\n",err,MIN_ERR);
@@ -208,7 +208,7 @@ void nn_check(double **ih_w,double *h_lay,double **ho_w){
 }/* end of nn_check() */
 
 
-void nn_eval(double **ih_w,double *h_lay,double **ho_w){
+void nn_eval(){
   int i, j;
   double l_sum, l_sum_error;
 
