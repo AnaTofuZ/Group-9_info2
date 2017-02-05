@@ -1,144 +1,144 @@
-ニューラルネットワークによる文字認識
+�˥塼���ͥåȥ���ˤ��ʸ��ǧ��
 	Naruaki TOMA
 	tnal@ie.u-ryukyu.ac.jp
 	http://www.eva.ie.u-ryukyu.ac.jp/~tnal/
 	Fri Sep  9 12:11:39 JST 2005
 
 
-＜目次＞
-0. これは何？
-1. 何のために作ったの？
-2. 開発環境
-3. ファイル
-4. コンパイル方法
-  4.1 数字文字認識の場合
-  4.2 平仮名文字認識の場合
-  4.3 アルファベット文字認識の場合
-  4.4 漢字文字認識の場合
-5. 使い方
-6. その他の細かな点
-  6.1 パラメータを変更したい。
-  6.2 実験する際に毎回 l とか入力するのは面倒。
-7. 最後に
-X. 考えてはいたけどやらなかったTODO
+���ܼ���
+0. ����ϲ���
+1. ���Τ���˺�ä��Ρ�
+2. ��ȯ�Ķ�
+3. �ե�����
+4. ����ѥ�����ˡ
+  4.1 ����ʸ��ǧ���ξ��
+  4.2 ʿ��̾ʸ��ǧ���ξ��
+  4.3 ����ե��٥å�ʸ��ǧ���ξ��
+  4.4 ����ʸ��ǧ���ξ��
+5. �Ȥ���
+6. ����¾�κ٤�����
+  6.1 �ѥ�᡼�����ѹ���������
+  6.2 �¸�����ݤ���� l �Ȥ����Ϥ���Τ����ݡ�
+7. �Ǹ��
+X. �ͤ��ƤϤ������ɤ��ʤ��ä�TODO
 
 
-＜本文＞
-0. これは何？
-　タイトルのままですが，ニューラルネットワークを用いた文字認識用の
-プログラムです．代表的なモデルである入力・中間・出力の3階層で構成
-される階層型ニューラルネットを用い，学習には逐次が他バックプロパ
-ゲーションを用いています．これで通じない人は
-	ニューラルネット, 階層型, バックプロパゲーション
+����ʸ��
+0. ����ϲ���
+�������ȥ�ΤޤޤǤ������˥塼���ͥåȥ�����Ѥ���ʸ��ǧ���Ѥ�
+�ץ������Ǥ�����ɽŪ�ʥ�ǥ�Ǥ������ϡ���֡����Ϥ�3���ؤǹ���
+����볬�ط��˥塼���ͥåȤ��Ѥ����ؽ��ˤ��༡��¾�Хå��ץ���
+�����������Ѥ��Ƥ��ޤ���������̤��ʤ��ͤ�
+	�˥塼���ͥå�, ���ط�, �Хå��ץ��ѥ��������
 	(artificial) neural network, hierarchical, back propagation
-あたりのキーワードで検索エンジンを利用すると良いでしょう．ついで
-に，src java class 等のキーワードを付加すると，公開されているソー
-スを簡単に探し出すことが出来ます．シンプルな階層型で十分であるなら
+������Υ�����ɤǸ������󥸥�����Ѥ�����ɤ��Ǥ��礦���Ĥ���
+�ˡ�src java class ���Υ�����ɤ��ղä���ȡ���������Ƥ��륽��
+�����ñ��õ���Ф����Ȥ�����ޤ�������ץ�ʳ��ط��ǽ�ʬ�Ǥ���ʤ�
 	http://www.eva.ie.u-ryukyu.ac.jp/~tnal/Job/NN/basic/
-にある一連のソースも役に立つかもしれません．
+�ˤ����Ϣ�Υ����������Ω�Ĥ��⤷��ޤ���
 
 
-1. 何のために作ったの？
-　学生実験用に，インタラクティブに
-　　　・指定した試行回数分重みを学習し
-　　　・学習事例を用いた学習度合いを確認，または
-　　　・未知事例を用いた柔軟さの確認
-といった事を出来るように作りました．シェルスクリプトで学習ステップ
-数毎の誤差推移図を作成するようにしてたりしますが，情報工学科の学生
-実験という意味では復習のために書いてみたぐらいの意味合いです．
+1. ���Τ���˺�ä��Ρ�
+�������¸��Ѥˡ����󥿥饯�ƥ��֤�
+�����������ꤷ����Բ��ʬ�Ťߤ�ؽ���
+���������ؽ�������Ѥ����ؽ��ٹ礤���ǧ���ޤ���
+��������̤�λ�����Ѥ������𤵤γ�ǧ
+�Ȥ��ä���������褦�˺��ޤ����������륹����ץȤǳؽ����ƥå�
+����θ�����ܿޤ��������褦�ˤ��Ƥ��ꤷ�ޤ��������󹩳زʤγ���
+�¸��Ȥ�����̣�Ǥ������Τ���˽񤤤Ƥߤ����餤�ΰ�̣�礤�Ǥ���
 
 
-2. 開発環境
-  OS: Mac OS X バージョン 10.4.2
+2. ��ȯ�Ķ�
+  OS: Mac OS X �С������ 10.4.2
   gcc: gcc version 4.0.0 20041026 (Apple Computer, Inc. build 4061)
   make: GNU Make 3.80
   gnuplot: gnuplot 3.8k patchlevel 3+0.10
   bash: GNU bash, version 2.05b.0(1)-release (powerpc-apple-darwin8.0)
 
-動作確認は Mac OS X でしかやっていませんが，ANSI標準ライブラリしか
-使ってないので，環境に依存せずコンパイルできると思います．多分．
-bash や gnuplot はシェルスクリプトを使わないのであれば必要ありません．
+ư���ǧ�� Mac OS X �Ǥ�����äƤ��ޤ��󤬡�ANSIɸ��饤�֥�ꤷ��
+�ȤäƤʤ��Τǡ��Ķ��˰�¸��������ѥ���Ǥ���Ȼפ��ޤ���¿ʬ��
+bash �� gnuplot �ϥ����륹����ץȤ�Ȥ�ʤ��ΤǤ����ɬ�פ���ޤ���
 
 
-3. ファイル
-./0README_ja.txt	このファイル．
+3. �ե�����
+./0README_ja.txt	���Υե����롥
 ./sample-output
-./sample-output/result.data	図作成用データ（ステップ毎のエラー）．
-./sample-output/result.learned	学習事例に対する学習度合いのチェック結果．
-./sample-output/result.png	ステップ毎のエラー推移図．
-./sample-output/result.txt	run_nn.bash 利用時の出力例．
+./sample-output/result.data	�޺����ѥǡ����ʥ��ƥå���Υ��顼�ˡ�
+./sample-output/result.learned	�ؽ�������Ф���ؽ��ٹ礤�Υ����å���̡�
+./sample-output/result.png	���ƥå���Υ��顼��ܿޡ�
+./sample-output/result.txt	run_nn.bash ���ѻ��ν����㡥
 ./src
-./src/.gnuplot		作図用スクリプト(run_bash.bashで自動生成)．
-./src/data		データ保存用ディレクトリ．
-./src/data/eva1-1.txt	　　learn?.txt を学習用事例として用います．
-./src/data/eva1-2.txt	　　eva* はファイル名は何でも良いのですが，
-./src/data/learn0.txt　　　　　未知事例として作ったものです．
-./src/data/learn1.txt	　　事例データは正答＋入力パターンで構成され，
-./src/data/learn2.txt	　　　　正答は半角英数字1文字
-./src/data/learn3.txt	　　　　入力パターンは parameter.h で指定した
-./src/data/learn4.txt	　　　　サイズで指定する必要があります．
+./src/.gnuplot		����ѥ�����ץ�(run_bash.bash�Ǽ�ư����)��
+./src/data		�ǡ�����¸�ѥǥ��쥯�ȥꡥ
+./src/data/eva1-1.txt	����learn?.txt ��ؽ��ѻ���Ȥ����Ѥ��ޤ���
+./src/data/eva1-2.txt	����eva* �ϥե�����̾�ϲ��Ǥ��ɤ��ΤǤ�����
+./src/data/learn0.txt����������̤�λ���Ȥ��ƺ�ä���ΤǤ���
+./src/data/learn1.txt	��������ǡ��������������ϥѥ�����ǹ������졤
+./src/data/learn2.txt	��������������Ⱦ�ѱѿ���1ʸ��
+./src/data/learn3.txt	�����������ϥѥ������ parameter.h �ǻ��ꤷ��
+./src/data/learn4.txt	���������������ǻ��ꤹ��ɬ�פ�����ޤ���
 ./src/data/learn5.txt
 ./src/data/learn6.txt
 ./src/data/learn7.txt
 ./src/data/learn8.txt
 ./src/data/learn9.txt
-./src/data.ja/		データ保存用ディレクトリ(平仮名用)．
-./src/data.en/		データ保存用ディレクトリ(アルファベット用)．
-./src/ex_bp_o.c		3階層型NN＋BPのサンプル．このプログラムでは未使用．
-./src/input.txt		標準入力サンプル(数字用)。
-./src/input.ja.txt	標準入力サンプル(平仮名用)。
-./src/input.en.txt	標準入力サンプル(アルファベット用)。
+./src/data.ja/		�ǡ�����¸�ѥǥ��쥯�ȥ�(ʿ��̾��)��
+./src/data.en/		�ǡ�����¸�ѥǥ��쥯�ȥ�(����ե��٥å���)��
+./src/ex_bp_o.c		3���ط�NN��BP�Υ���ץ롥���Υץ������Ǥ�̤���ѡ�
+./src/input.txt		ɸ�����ϥ���ץ�(������)��
+./src/input.ja.txt	ɸ�����ϥ���ץ�(ʿ��̾��)��
+./src/input.en.txt	ɸ�����ϥ���ץ�(����ե��٥å���)��
 ./src/Makefile
-./src/num.c		メインプログラム．
-./src/parameter.h	各種パラメータ等．
-./src/problem_list.txt	学習用事例リスト．
-./src/problem_list.ja.txt	学習用事例リスト(平仮名用)．
-./src/problem_list.en.txt	学習用事例リスト(アルファベット用)．
-./src/run_nn.bash	作図用スクリプト．
-./src/set_problem.c	主に事例読み込み部．
-./src/sigmoid.c		シグモイド関数．
+./src/num.c		�ᥤ��ץ�����ࡥ
+./src/parameter.h	�Ƽ�ѥ�᡼������
+./src/problem_list.txt	�ؽ��ѻ���ꥹ�ȡ�
+./src/problem_list.ja.txt	�ؽ��ѻ���ꥹ��(ʿ��̾��)��
+./src/problem_list.en.txt	�ؽ��ѻ���ꥹ��(����ե��٥å���)��
+./src/run_nn.bash	����ѥ�����ץȡ�
+./src/set_problem.c	��˻����ɤ߹�������
+./src/sigmoid.c		�����⥤�ɴؿ���
 
 
-4. コンパイル方法
-4.1 数字文字認識の場合
-数字文字認識用のデータが data/ に置いてあります。
-これを用いて実験する場合は、
-特に変更する事無しに、src ディレクトリにて make コマンドを実行。
-　　prompt> make
+4. ����ѥ�����ˡ
+4.1 ����ʸ��ǧ���ξ��
+����ʸ��ǧ���ѤΥǡ����� data/ ���֤��Ƥ���ޤ���
+������Ѥ��Ƽ¸�������ϡ�
+�ä��ѹ������̵���ˡ�src �ǥ��쥯�ȥ�ˤ� make ���ޥ�ɤ�¹ԡ�
+����prompt> make
 
-4.2 平仮名文字認識の場合
-平仮名文字認識用のデータが data.ja/ に置いてあります。
-これを用いて実験する場合は、
-(1) parameter.h 内の "problem_list.txt" を "problem_list.ja.txt" に変更。
-(2) make コマンドを実行。
+4.2 ʿ��̾ʸ��ǧ���ξ��
+ʿ��̾ʸ��ǧ���ѤΥǡ����� data.ja/ ���֤��Ƥ���ޤ���
+������Ѥ��Ƽ¸�������ϡ�
+(1) parameter.h ��� "problem_list.txt" �� "problem_list.ja.txt" ���ѹ���
+(2) make ���ޥ�ɤ�¹ԡ�
 
-4.3 アルファベット文字認識の場合
-アルファベット文字認識用のデータが data.en/ に置いてあります。
-これを用いて実験する場合は、
-(1) parameter.h 内の "problem_list.txt" を "problem_list.en.txt" に変更。
-(2) make コマンドを実行。
+4.3 ����ե��٥å�ʸ��ǧ���ξ��
+����ե��٥å�ʸ��ǧ���ѤΥǡ����� data.en/ ���֤��Ƥ���ޤ���
+������Ѥ��Ƽ¸�������ϡ�
+(1) parameter.h ��� "problem_list.txt" �� "problem_list.en.txt" ���ѹ���
+(2) make ���ޥ�ɤ�¹ԡ�
 
-4.4 漢字文字認識の場合
-アルファベット文字認識用のデータが data.kanji/ に置いてあります。
-これを用いて実験する場合は、
-(1) parameter.h 内の
- - "problem_list.txt" を "problem_list.en.txt" に変更。
- - SIZE_X を 17 に変更。
- - SIZE_Y を 19 に変更。
-(2) make コマンドを実行。
+4.4 ����ʸ��ǧ���ξ��
+����ե��٥å�ʸ��ǧ���ѤΥǡ����� data.kanji/ ���֤��Ƥ���ޤ���
+������Ѥ��Ƽ¸�������ϡ�
+(1) parameter.h ���
+ - "problem_list.txt" �� "problem_list.en.txt" ���ѹ���
+ - SIZE_X �� 17 ���ѹ���
+ - SIZE_Y �� 19 ���ѹ���
+(2) make ���ޥ�ɤ�¹ԡ�
 
 
 
-5. 使い方
-実行ファイル(nn_num)、もしくはシェルスクリプト(run_nn.bash)に
-引数としてシード値を与えて実行してください。
+5. �Ȥ���
+�¹ԥե�����(nn_num)���⤷���ϥ����륹����ץ�(run_nn.bash)��
+�����Ȥ��ƥ������ͤ�Ϳ���Ƽ¹Ԥ��Ƥ���������
 
-　　prompt> ./nn_num 1
-とすると，学習用事例を読み込み，usage を出力しますので，それに
-従ってインタラクティブに動かしてみいて下さい．シェルスクリプト
-を利用する場合は
-　　prompt> ./run_nn.bash 1
-です．（その後は同じ）
+����prompt> ./nn_num 1
+�Ȥ���ȡ��ؽ��ѻ�����ɤ߹��ߡ�usage ����Ϥ��ޤ��Τǡ������
+���äƥ��󥿥饯�ƥ��֤�ư�����Ƥߤ��Ʋ������������륹����ץ�
+�����Ѥ������
+����prompt> ./run_nn.bash 1
+�Ǥ����ʤ��θ��Ʊ����
 
   ===== USAGE =====
   learn: nn> l
@@ -147,34 +147,34 @@ bash や gnuplot はシェルスクリプトを使わないのであれば必要
        after that, input filename defined test-pattern
   =================
 
-指定した試行回数分，学習させるには「l」．
-学習事例に対する学習度合いを確認するには「c」．
-未知事例に対する適応度合いを確認するには「e」を入力後，
-ファイル名を促すプロンプトが出力されますので，未知事例を
-保存したファイル名を入力してください．
+���ꤷ����Բ��ʬ���ؽ�������ˤϡ�l�ס�
+�ؽ�������Ф���ؽ��ٹ礤���ǧ����ˤϡ�c�ס�
+̤�λ�����Ф���Ŭ���ٹ礤���ǧ����ˤϡ�e�פ����ϸ塤
+�ե�����̾��¥���ץ���ץȤ����Ϥ���ޤ��Τǡ�̤�λ����
+��¸�����ե�����̾�����Ϥ��Ƥ���������
 
 
-6. その他の細かな点
-6.1 パラメータを変更したい。
-　parameter.h を参照ください。
+6. ����¾�κ٤�����
+6.1 �ѥ�᡼�����ѹ���������
+��parameter.h �򻲾Ȥ���������
 
-6.2 実験する際に毎回 l とか入力するのは面倒。
-　「l」に限定した話なら parameter.h 内の「ITERATIONS」
-の値を増やすことで、一度に学習する回数の上限を変更する
-ことができます。
-　それ以外の c や e 等もまとめての話なら、標準入力を
-ファイルに切り替えることで自動化することが可能です。
-例えば、
+6.2 �¸�����ݤ���� l �Ȥ����Ϥ���Τ����ݡ�
+����l�פ˸��ꤷ���äʤ� parameter.h ��Ρ�ITERATIONS��
+���ͤ����䤹���Ȥǡ����٤˳ؽ��������ξ�¤��ѹ�����
+���Ȥ��Ǥ��ޤ���
+������ʳ��� c �� e ����ޤȤ�Ƥ��äʤ顢ɸ�����Ϥ�
+�ե�������ڤ��ؤ��뤳�ȤǼ�ư�����뤳�Ȥ���ǽ�Ǥ���
+�㤨�С�
 	nn> l
 	nn> l
 	nn> c
 	nn> e
 	filename? --> data/eva1-1.txt
 	nn> q
-のように l,l,c,e,data/eva1-1.txt, q の6項目をこの順序で
-毎回入力するのでそれを自動化したいという場合には、
-その6項目＋空の行を記入したファイル input.txt を作成して
-ください。
+�Τ褦�� l,l,c,e,data/eva1-1.txt, q ��6���ܤ򤳤ν����
+������Ϥ���ΤǤ����ư���������Ȥ������ˤϡ�
+����6���ܡܶ��ιԤ��������ե����� input.txt ���������
+����������
 =====begin(input.txt)=====
 l
 l
@@ -184,27 +184,27 @@ data/eva1-1.txt
 q
 
 =====end(input.txt)=====
-上記のように作成したファイルを使って、標準入力代わりに
-使うと、自動で入力した結果を得ることができます。具体的には、
+�嵭�Τ褦�˺��������ե������Ȥäơ�ɸ�����������
+�Ȥ��ȡ���ư�����Ϥ�����̤����뤳�Ȥ��Ǥ��ޤ�������Ū�ˤϡ�
 	./nn_num 1 < input.txt
-	もしくは
+	�⤷����
 	./run_nn.bash 1 < input.txt
-のように実行すると、手で入力する手間を省くことができます。
+�Τ褦�˼¹Ԥ���ȡ�������Ϥ����֤�ʤ����Ȥ��Ǥ��ޤ���
 
 
-7. 最後に
-質問・ご指摘等は當間（tnal@ie.u-ryukyu.ac.jp）まで．
-更新するかどうかは（私に取っての）重要度と気分次第ですが・・・．
-個人的利用以外の使用については連絡してもらえるとうれしいかも．
-単純にどういう所で使われるのかが興味があるだけで，制約・制限
-等を課す意図は全くありません．
+7. �Ǹ��
+���䡦����Ŧ�����Ĵ֡�tnal@ie.u-ryukyu.ac.jp�ˤޤǡ�
+�������뤫�ɤ����ϡʻ�˼�äƤΡ˽����٤ȵ�ʬ����Ǥ�����������
+�Ŀ�Ū���Ѱʳ��λ��ѤˤĤ��Ƥ�Ϣ�����Ƥ�館��Ȥ��줷�����⡥
+ñ��ˤɤ�������ǻȤ���Τ�����̣����������ǡ���������
+����ݤ��տޤ���������ޤ���
 
 
-X. 考えてはいたけどやらなかったTODO
-・Java か cocoa で NN の視覚化．
-　GUIなプログラミングは嫌いなんです・・
-・重みの save/restore．
-　今回は必要なかったので．
-・事例データ作成ツール．
-　面倒ですが，サンプルなので手動で頑張る方向で．
+X. �ͤ��ƤϤ������ɤ��ʤ��ä�TODO
+��Java �� cocoa �� NN �λ�в���
+��GUI�ʥץ�����ߥ󥰤Ϸ����ʤ�Ǥ�����
+���Ťߤ� save/restore��
+�������ɬ�פʤ��ä��Τǡ�
+������ǡ��������ġ��롥
+�����ݤǤ���������ץ�ʤΤǼ�ư�Ǵ�ĥ�������ǡ�
 
