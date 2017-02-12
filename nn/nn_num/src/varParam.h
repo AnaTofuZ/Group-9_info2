@@ -1,3 +1,3 @@
-#define ETA 1.9
-#define ALPHA 1.9
-#define HIDDEN 10
+#define ETA 1.83
+#define ALPHA 0.73
+#define HIDDEN 15
