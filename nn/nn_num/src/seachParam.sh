@@ -1,17 +1,14 @@
 #!/bin/sh
 
-etas="0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9"
-alphas="0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9"
-hiddens="1 2 3 4 5 6 7 8 9 10"
 resultfile="./seachParamResult.txt"
 
 gcc -o rewriteVarParam rewriteVarParam.c
 echo "" > $resultfile
-for eta in $etas
+for eta in `seq 0.00 0.01 1.99`
 do
-  for alpha in $alphas
+  for alpha in `seq 0.00 0.01 1.99`
   do
-	for hidden in $hiddens
+	for hidden in `seq 1 15`
 	do
 	  ./rewriteVarParam $eta $alpha $hidden
 	  gcc -Wall -O2 -c -o num.o num.c
