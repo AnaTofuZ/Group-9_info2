@@ -7,6 +7,6 @@ PROG    = nn_num
 ALL: $(PROG)
 $(PROG):$(OBJS)
 	$(CC) $(FLAGS) -o $@ $(OBJS)  $(LIBS)
-$(OBJS): parameter.h
+$(OBJS): parameter.h varParam.h
 clean:
 	rm -f $(OBJS) *~ a.out $(PROG)

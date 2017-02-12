@@ -22,6 +22,13 @@ level3.3では文字認識プログラムnn\_numにおいて,評価用データ�
 差分データを作成する場合,機械的に変更するべきであると考える．
 しかし今回は文字認識であり,実際には手書き文字などの判断につながっていく分野である．
 その為,人間が想定できる範囲の変更を手動で行い,機械的にランダムに変更するアプローチは取らなかった．
+しかし,3種類の文字とは言え実験データを用意するのは手間である．
+今回はその問題を解決するために,引数に応じて教師用データを10個のテキストファイルへとコピーするシェルスクリプトを作成した．
+実際に使用したスクリプトを示す． (ソースコード:\ref{makeeval})
+\lstinputlisting[caption=makeeval.sh,label=makeeval]{../nn/nn_num/src/data.level3.3/makeeval.sh}
+
+それ以降の文字の変更は前述の通り手動で行った．
+
 実際に作成したデータは
 \begin{oframed}
 \begin{verbatim}
@@ -30,7 +37,144 @@ level3.3では文字認識プログラムnn\_numにおいて,評価用データ�
 \end{oframed}
 ディレクトリ下に保存している.
 
+命名規則はそれぞれ,evel [2,3,5]- [0-9]+.txtである．
+
+\subsubsection{変更したデータ群}
+今回変更したデータ群を示す．
+ただし全件記述すると3*10=30個のデータを記述することになる．
+レポートの体裁上,多く記載しすぎても問題があると判断し,今回はそれぞれ3つずつの記載に留めた． (ソースコード:\ref{eval22} $\sim$ \ref{eval510} )
+作成したデータは全てディレクトリ内に保存しているので参照されたい．
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c}
+
+            \begin{minipage}{0.33\hsize}
+                \begin{center}
+                \lstinputlisting[caption=eval2-1.txt,label=eval21]{../nn/nn_num/src/data.level3.3/eval2-1.txt}
+                \end{center}
+                \end{minipage}
+
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval2-3.txt,label=eval23]{../nn/nn_num/src/data.level3.3/eval2-3.txt}
+                    \end{center}
+                    \end{minipage}
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval2-5.txt,label=eval25]{../nn/nn_num/src/data.level3.3/eval2-5.txt}
+                    \end{center}
+                    \end{minipage}
+        \end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c}
+
+            \begin{minipage}{0.33\hsize}
+                \begin{center}
+                \lstinputlisting[caption=eval3-3.txt,label=eval33]{../nn/nn_num/src/data.level3.3/eval3-3.txt}
+                \end{center}
+                \end{minipage}
+
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval3-5.txt,label=eval35]{../nn/nn_num/src/data.level3.3/eval3-5.txt}
+                    \end{center}
+                    \end{minipage}
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval3-10.txt,label=eval310]{../nn/nn_num/src/data.level3.3/eval3-10.txt}
+                    \end{center}
+                    \end{minipage}
+        \end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c}
+
+            \begin{minipage}{0.33\hsize}
+                \begin{center}
+                \lstinputlisting[caption=eval5-3.txt,label=eval53]{../nn/nn_num/src/data.level3.3/eval5-3.txt}
+                \end{center}
+                \end{minipage}
+
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval5-5.txt,label=eval55]{../nn/nn_num/src/data.level3.3/eval5-5.txt}
+                    \end{center}
+                    \end{minipage}
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval5-10.txt,label=eval510]{../nn/nn_num/src/data.level3.3/eval5-10.txt}
+                    \end{center}
+                    \end{minipage}
+        \end{tabular}
+\end{center}
+\end{figure}
+
 \subsubsection{結果}
+今回実験を行うにあたり,最終的な評価の出力のみ抽出したい．
+またテキストファイル化し結果を保存したいので,シェルスクリプトを用いて自動で実験及び結果の抽出を行った．
+今回作成し実行したシェルスクリプトを示す． (ソースコード:\ref{searchlevel23})
+
+\lstinputlisting[caption=search\_level2.3.sh,label=searchlevel23]{../nn/nn_num/src/search_level2.3.sh}
+
+このシェルスクリプトではまずdata.level3.3ディレクトリ内のresultがファイル名に含まれるtxtファイルを削除する．
+その後ディレクトリ中の評価用テキストファイルを1つずつfor文で変数fileにパスを代入しながら処理を行う．
+for文中では,nn\_numを起動する．今回はseed値を1000に固定し3回学習をした後にcheckを行い,fileを評価する．
+nn\_numでの一連の処理の結果は一次ファイル.tmpに保存し,得たい評価結果のみcutとsedを用いて切り出す．
+切り出した結果は,\${file}.result.txtの命名規則で保存していく．
+
+実際にこのシェルスクリプト実行した結果を示す．
+
+\begin{oframed}
+    \begin{verbatim}
+$sh search_level2.3.sh
+data.level3.3/eval2-1.txt
+data.level3.3/eval2-10.txt
+data.level3.3/eval2-2.txt
+data.level3.3/eval2-3.txt
+data.level3.3/eval2-4.txt
+data.level3.3/eval2-5.txt
+ **中略**
+data.level3.3/eval5-4.txt
+data.level3.3/eval5-5.txt
+data.level3.3/eval5-6.txt
+data.level3.3/eval5-7.txt
+data.level3.3/eval5-8.txt
+data.level3.3/eval5-9.txt\end{verbatim}
+\end{oframed}
+
+次にこのシェルスクリプトによって生成された各評価用データの結果を確認していく．
+今回も全てのデータを出力するのは冗長だと判断し,先程の例に対しての結果を掲載する．
+
+まず 評価用データ\ref{eval21}に対する出力結果である．
+
+\lstinputlisting[caption=eval2-1.txtresult.txt,label=reval21]{../nn/nn_num/src/data.level3.3/eval2-1.txtresult.txt}
+
+この評価用データはほぼ教師用データと同じであった為か,正しく2であると認識された．
+では,続いて横2行を完全に1で埋め尽くした場合,どういった挙動になるかを検証した．
+
+\lstinputlisting[caption=eval2-3.txtresult.txt,label=reval23]{../nn/nn_num/src/data.level3.3/eval2-3.txtresult.txt}
+
+今回もまだ2であると認識された．では,この2に対して払いのような部分を付けた．
+\lstinputlisting[caption=eval2-5.txtresult.txt,label=reval25]{../nn/nn_num/src/data.level3.3/eval2-5.txtresult.txt}
+
+今回もまだ2であると認識された．しかしこれら3つを比較していくと,次第に2であるとの認識率が低下し,7が上昇している．
+漢数字の七の場合,横線が2つに縦線が入っている．可能性としては,横の2線が強くなり,かつ縦線が増えてきた為七であると認識し始めたと考える．
+
+では,教師用データ2に対して極端に変更した場合を考察する．
+今回は右上に縦を揃えず,二つずつ1を配置した．(ソースコード:\ref{eval210})人間では二と読めることが出来る．
+
+\lstinputlisting[caption=eval2-10.txt,label=eval210]{../nn/nn_num/src/data.level3.3/eval2-10.txt}
+\lstinputlisting[caption=eval2-10.txtresult.txt,label=reval210]{../nn/nn_num/src/data.level3.3/eval2-10.txtresult.txt}
+
+出力結果 (ソースコード: \ref{reval210})を確認すると,計算機はどの漢数字か判断しかねていることが解る．
+これは入力されたデータが極端に小さく,かつ表示されたデータが少ない事が原因ではないかと推測出来る．
 
 \subsubsection{考察}
-
