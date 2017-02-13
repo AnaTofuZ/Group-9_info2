@@ -1,0 +1,32 @@
+--- /Users/e155730/workspace/exeperiment_2/nal/nn/nn_num/src/run_nn.bash	2017-02-05 22:32:37.000000000 +0900
++++ ../nn/nn_num/src/run_nn.bash	2017-02-13 10:59:29.000000000 +0900
+@@ -11,6 +11,7 @@
+ # prompt> ./run_nn.bash $rand-seed
+ 
+ EXE=nn_num
++TITLE=$1
+ 
+ 
+ # 学習ステップ数毎の誤差推移図作成
+@@ -20,9 +21,9 @@
+     grep iteration $STDOUT | tr -s " " " " | cut -f3,6 -d" " > $datafile
+     echo set xlabel \"iteration\" > .gnuplot
+     echo set ylabel \"error\" >> .gnuplot
+-    echo set title \"Error transition per iteration on BP-NN\" >> .gnuplot
+-    echo set terminal svg >> .gnuplot
+-    echo set output \"$figfile\" >> .gnuplot
++    echo set title \"Error transition per iteration on BP-NN at $TITLE\" >> .gnuplot
++    echo set terminal pdf >> .gnuplot
++    echo set output \"$TITLE.pdf\" >> .gnuplot
+     echo plot \"$datafile\" with line >> .gnuplot
+     gnuplot < .gnuplot
+ }
+@@ -36,7 +37,7 @@
+ 
+ if [ -e $EXE -a $# -eq 1 ] ; then
+     STDOUT=result-seed$1.txt
+-    ./$EXE $1 | tee $STDOUT
++    ./$EXE 1000 | tee $STDOUT
+     learning_fig
+     learned_fig
+ else

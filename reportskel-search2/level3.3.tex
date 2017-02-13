@@ -10,7 +10,217 @@ level3.3では文字認識プログラムnn\_numにおいて,評価用データ�
 人間では誤差の範囲であるが,計算機の場合1bitの変化で計算した内容が大幅に変化していくのではないかと推測した．
 従って,学習用データからずれていくに連れて文字を誤認識する確率が上昇するのではないかとの仮説を立てた．
 
+この仮説のもと,「二,三,五」の3種類の数字に着目し,いくつか差分を作成し認識率の変化を測定した.
+
+\subsubsection{実験内容}
+作成したデータはそれぞれ漢数字の「二,三,五」を少しずつ変更したものである．
+これら3文字はそれぞれ横線が多く,五に関しては横線と斜め,及び縦線で構成されている．
+例えば三という文字の二画目の横棒に「払い」の様な記述を加えると五だと認識されるのではないか．
+また,二の払いを横棒と認識出来るレベルにまでいれると,一,もしくは三として判断されるのではないかとも考えた．
+従って,構成している要素が英数字よりも単純な漢数字の3つで今回は測定を行う．
+
+差分データを作成する場合,機械的に変更するべきであると考える．
+しかし今回は文字認識であり,実際には手書き文字などの判断につながっていく分野である．
+その為,人間が想定できる範囲の変更を手動で行い,機械的にランダムに変更するアプローチは取らなかった．
+しかし,3種類の文字とは言え実験データを用意するのは手間である．
+今回はその問題を解決するために,引数に応じて教師用データを10個のテキストファイルへとコピーするシェルスクリプトを作成した．
+実際に使用したスクリプトを示す． (ソースコード:\ref{makeeval})
+\lstinputlisting[caption=makeeval.sh,label=makeeval]{../nn/nn_num/src/data.level3.3/makeeval.sh}
+
+それ以降の文字の変更は前述の通り手動で行った．
+
+実際に作成したデータは
+\begin{oframed}
+\begin{verbatim}
+./nn/nn_num/src/data.level3.3
+\end{verbatim}
+\end{oframed}
+ディレクトリ下に保存している.
+
+命名規則はそれぞれ,evel [2,3,5]- [0-9]+.txtである．
+
+\subsubsection{変更したデータ群}
+今回変更したデータ群を示す．
+ただし全件記述すると3*10=30個のデータを記述することになる．
+レポートの体裁上,多く記載しすぎても問題があると判断し,今回はそれぞれ3つずつの記載に留めた． (ソースコード:\ref{eval21} $\sim$ \ref{eval510} )
+作成したデータは全てディレクトリ内に保存しているので参照されたい．
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c}
+
+            \begin{minipage}{0.33\hsize}
+                \begin{center}
+                \lstinputlisting[caption=eval2-1.txt,label=eval21]{../nn/nn_num/src/data.level3.3/eval2-1.txt}
+                \end{center}
+                \end{minipage}
+
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval2-3.txt,label=eval23]{../nn/nn_num/src/data.level3.3/eval2-3.txt}
+                    \end{center}
+                    \end{minipage}
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval2-5.txt,label=eval25]{../nn/nn_num/src/data.level3.3/eval2-5.txt}
+                    \end{center}
+                    \end{minipage}
+        \end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c}
+
+            \begin{minipage}{0.33\hsize}
+                \begin{center}
+                \lstinputlisting[caption=eval3-3.txt,label=eval33]{../nn/nn_num/src/data.level3.3/eval3-3.txt}
+                \end{center}
+                \end{minipage}
+
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval3-5.txt,label=eval35]{../nn/nn_num/src/data.level3.3/eval3-5.txt}
+                    \end{center}
+                    \end{minipage}
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval3-10.txt,label=eval310]{../nn/nn_num/src/data.level3.3/eval3-10.txt}
+                    \end{center}
+                    \end{minipage}
+        \end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c}
+
+            \begin{minipage}{0.33\hsize}
+                \begin{center}
+                \lstinputlisting[caption=eval5-3.txt,label=eval53]{../nn/nn_num/src/data.level3.3/eval5-3.txt}
+                \end{center}
+                \end{minipage}
+
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval5-5.txt,label=eval55]{../nn/nn_num/src/data.level3.3/eval5-5.txt}
+                    \end{center}
+                    \end{minipage}
+                \begin{minipage}{0.33\hsize}
+                    \begin{center}
+                        \lstinputlisting[caption=eval5-10.txt,label=eval510]{../nn/nn_num/src/data.level3.3/eval5-10.txt}
+                    \end{center}
+                    \end{minipage}
+        \end{tabular}
+\end{center}
+\end{figure}
+
 \subsubsection{結果}
+今回実験を行うにあたり,最終的な評価の出力のみ抽出したい．
+またテキストファイル化し結果を保存したいので,シェルスクリプトを用いて自動で実験及び結果の抽出を行った．
+今回作成し実行したシェルスクリプトを示す． (ソースコード:\ref{searchlevel23})
+
+\lstinputlisting[caption=search\_level2.3.sh,label=searchlevel23]{../nn/nn_num/src/search_level2.3.sh}
+
+このシェルスクリプトではまずdata.level3.3ディレクトリ内のresultがファイル名に含まれるtxtファイルを削除する．
+その後ディレクトリ中の評価用テキストファイルを1つずつfor文で変数fileにパスを代入しながら処理を行う．
+for文中では,nn\_numを起動する．今回はseed値を1000に固定し3回学習をした後にcheckを行い,fileを評価する．
+nn\_numでの一連の処理の結果は一次ファイル.tmpに保存し,得たい評価結果のみcutとsedを用いて切り出す．
+切り出した結果は,\${file}.result.txtの命名規則で保存していく．
+
+実際にこのシェルスクリプト実行した結果を示す．
+
+\begin{oframed}
+    \begin{verbatim}
+$sh search_level2.3.sh
+data.level3.3/eval2-1.txt
+data.level3.3/eval2-10.txt
+data.level3.3/eval2-2.txt
+data.level3.3/eval2-3.txt
+data.level3.3/eval2-4.txt
+data.level3.3/eval2-5.txt
+ **中略**
+data.level3.3/eval5-4.txt
+data.level3.3/eval5-5.txt
+data.level3.3/eval5-6.txt
+data.level3.3/eval5-7.txt
+data.level3.3/eval5-8.txt
+data.level3.3/eval5-9.txt\end{verbatim}
+\end{oframed}
+
+次にこのシェルスクリプトによって生成された各評価用データの結果を確認していく．
+今回も全てのデータを出力するのは冗長だと判断し,先程の例に対しての結果を掲載する．
+
+まず 評価用データ\ref{eval21}に対する出力結果である．
+
+\lstinputlisting[caption=eval2-1.txtresult.txt,label=reval21]{../nn/nn_num/src/data.level3.3/eval2-1.txtresult.txt}
+
+この評価用データはほぼ教師用データと同じであった為か,正しく2であると認識された．
+では,続いて横2行を完全に1で埋め尽くした場合,どういった挙動になるかを検証した．
+
+\lstinputlisting[caption=eval2-3.txtresult.txt,label=reval23]{../nn/nn_num/src/data.level3.3/eval2-3.txtresult.txt}
+
+今回もまだ2であると認識された．では,この2に対して払いのような部分を付けた．
+\lstinputlisting[caption=eval2-5.txtresult.txt,label=reval25]{../nn/nn_num/src/data.level3.3/eval2-5.txtresult.txt}
+
+今回もまだ2であると認識された．しかしこれら3つを比較していくと,次第に2であるとの認識率が低下し,7が上昇している．
+漢数字の七の場合,横線が2つに縦線が入っている．可能性としては,横の2線が強くなり,かつ縦線が増えてきた為七であると認識し始めたと考える．
+
+では,教師用データ2に対して極端に変更した場合を考察する．
+今回は右上に縦を揃えず,二つずつ1を配置した．(ソースコード:\ref{eval210})人間では二と読めることが出来る．
+
+\lstinputlisting[caption=eval2-10.txt,label=eval210]{../nn/nn_num/src/data.level3.3/eval2-10.txt}
+\lstinputlisting[caption=eval2-10.txtresult.txt,label=reval210]{../nn/nn_num/src/data.level3.3/eval2-10.txtresult.txt}
+
+出力結果 (ソースコード:\ref{reval210})を確認すると,計算機はどの漢数字か判断しかねていることが解る．
+これは入力されたデータが極端に小さく,かつ表示されたデータが少ない事が原因ではないかと推測出来る．
+
+
+続いて漢数字「三」の考察を行う．今回は3本の直線の長さがそれぞれ一定でないケースでは,どのような実行結果が得られるか検証した結果を示す．
+(入力データ:\ref{eval33},出力結果:\ref{reval33})
+\lstinputlisting[caption=eval3-3.txtresult.txt,label=reval33]{../nn/nn_num/src/data.level3.3/eval3-3.txtresult.txt}
+
+出力結果を確認すると,3であると認識が出来ていた．
+では,三に払い(止め)の様な部分を付け加えると認識出来るかどうかを検証した例を示す．
+(入力データ:\ref{eval35},出力結果:\ref{reval35})
+\lstinputlisting[caption=eval3-5.txtresult.txt,label=reval35]{../nn/nn_num/src/data.level3.3/eval3-5.txtresult.txt}
+実行結果を見ると,3であるという認識が1番強かったが,4,5が同時に上昇していた．
+最後に3に対して直線を引き,漢字の「王」の様な文字に変更した．
+この場合,縦棒が伸びただけであるので3であるとまだ認識出来ると仮説を立てた．
+(入力データ:\ref{eval310},出力結果:\ref{reval310})
+\lstinputlisting[caption=eval3-10.txtresult.txt,label=reval310]{../nn/nn_num/src/data.level3.3/eval3-10.txtresult.txt}
+予想通り,確立上はまだ3であると認識されていた．
+この3つのデータから,位置情報と大まかなパーツが揃っていれば認識されると推測出来る．
+
+この結果を踏まえて,「五」ではいくつかパーツを削除,または追加して検証した．
+まずは五の上から二本目と三本目の横棒と連結する部分を削除した場合,認識されるかどうかを検証した．
+(入力データ:\ref{eval53},出力結果:\ref{reval53})
+\lstinputlisting[caption=eval5-3.txtresult.txt,label=reval53]{../nn/nn_num/src/data.level3.3/eval5-3.txtresult.txt}
+結果を見ると3であると認識されてしまっていた．
+前述した3のパターン (ソースコード:\ref{eval310})と類似した形となっている為,計算機が3であると認識したと推測出来る．
+
+大まかなパーツを残したまま,各パーツのサイズをやや縮小した場合でどうなるかを次に示す．
+(入力データ:\ref{eval53},出力結果:\ref{reval53})
+\lstinputlisting[caption=eval5-3.txtresult.txt,label=reval53]{../nn/nn_num/src/data.level3.3/eval5-3.txtresult.txt}
+結果を見ると先程よりは確立は低いが,3であると認識されてしまっていた．
+ただし五であるという認識が先程よりはやや上がっている．
+
+では最後に,五の中心の四角形の部分を全て1で埋め尽くした場合の挙動を確認する．
+(入力データ:\ref{eval510},出力結果:\ref{reval510})
+\lstinputlisting[caption=eval5-10.txtresult.txt,label=reval510]{../nn/nn_num/src/data.level3.3/eval5-10.txtresult.txt}
+結果では1であると認識されていた．
+今回このデータがなぜ1であると認識されたかは十分に推測できなかったが,
+学習用データからずれていくに連れて文字を誤認識する確率が上昇するという仮説が正しかったことが立証出来た．
 
 \subsubsection{考察}
+今回の結果から,学習したデータとのずれが大きいほど誤認識していくことが解った．
+しかし「ずれ」は人間が考えているものとは別の物である．
 
+
+人間が読み取れるレベルと計算機が学習によって獲得する,そのものであると認識出来る力にはやはり隔たりがある．
+今回の文字認識プログラムnn\_numにおいては,場所とサイズ.また構成要素である直線の向きや本数に応じて認識力が変化していく．
+その為,極端に場所やサイズが変更されたデータが入った場合,もはやデータの属するものがなんであるのかの検討がつかなくなっていた．
+故に今回のプログラムでは,如実に教師用データとの違いが出力結果に反映されてしまう事が確認できた．
+もし手書き文字を実際にこのプログラムで認識させる場合,アルゴリズムは改良する必要があるだろう．
