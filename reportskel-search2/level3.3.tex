@@ -42,7 +42,7 @@ level3.3では文字認識プログラムnn\_numにおいて,評価用データ�
 \subsubsection{変更したデータ群}
 今回変更したデータ群を示す．
 ただし全件記述すると3*10=30個のデータを記述することになる．
-レポートの体裁上,多く記載しすぎても問題があると判断し,今回はそれぞれ3つずつの記載に留めた． (ソースコード:\ref{eval22} $\sim$ \ref{eval510} )
+レポートの体裁上,多く記載しすぎても問題があると判断し,今回はそれぞれ3つずつの記載に留めた． (ソースコード:\ref{eval21} $\sim$ \ref{eval510} )
 作成したデータは全てディレクトリ内に保存しているので参照されたい．
 
 \begin{figure}[H]
@@ -174,7 +174,53 @@ data.level3.3/eval5-9.txt\end{verbatim}
 \lstinputlisting[caption=eval2-10.txt,label=eval210]{../nn/nn_num/src/data.level3.3/eval2-10.txt}
 \lstinputlisting[caption=eval2-10.txtresult.txt,label=reval210]{../nn/nn_num/src/data.level3.3/eval2-10.txtresult.txt}
 
-出力結果 (ソースコード: \ref{reval210})を確認すると,計算機はどの漢数字か判断しかねていることが解る．
+出力結果 (ソースコード:\ref{reval210})を確認すると,計算機はどの漢数字か判断しかねていることが解る．
 これは入力されたデータが極端に小さく,かつ表示されたデータが少ない事が原因ではないかと推測出来る．
 
+
+続いて漢数字「三」の考察を行う．今回は3本の直線の長さがそれぞれ一定でないケースでは,どのような実行結果が得られるか検証した結果を示す．
+(入力データ:\ref{eval33},出力結果:\ref{reval33})
+\lstinputlisting[caption=eval3-3.txtresult.txt,label=reval33]{../nn/nn_num/src/data.level3.3/eval3-3.txtresult.txt}
+
+出力結果を確認すると,3であると認識が出来ていた．
+では,三に払い(止め)の様な部分を付け加えると認識出来るかどうかを検証した例を示す．
+(入力データ:\ref{eval35},出力結果:\ref{reval35})
+\lstinputlisting[caption=eval3-5.txtresult.txt,label=reval35]{../nn/nn_num/src/data.level3.3/eval3-5.txtresult.txt}
+実行結果を見ると,3であるという認識が1番強かったが,4,5が同時に上昇していた．
+最後に3に対して直線を引き,漢字の「王」の様な文字に変更した．
+この場合,縦棒が伸びただけであるので3であるとまだ認識出来ると仮説を立てた．
+(入力データ:\ref{eval310},出力結果:\ref{reval310})
+\lstinputlisting[caption=eval3-10.txtresult.txt,label=reval310]{../nn/nn_num/src/data.level3.3/eval3-10.txtresult.txt}
+予想通り,確立上はまだ3であると認識されていた．
+この3つのデータから,位置情報と大まかなパーツが揃っていれば認識されると推測出来る．
+
+この結果を踏まえて,「五」ではいくつかパーツを削除,または追加して検証した．
+まずは五の上から二本目と三本目の横棒と連結する部分を削除した場合,認識されるかどうかを検証した．
+(入力データ:\ref{eval53},出力結果:\ref{reval53})
+\lstinputlisting[caption=eval5-3.txtresult.txt,label=reval53]{../nn/nn_num/src/data.level3.3/eval5-3.txtresult.txt}
+結果を見ると3であると認識されてしまっていた．
+前述した3のパターン (ソースコード:\ref{eval310})と類似した形となっている為,計算機が3であると認識したと推測出来る．
+
+大まかなパーツを残したまま,各パーツのサイズをやや縮小した場合でどうなるかを次に示す．
+(入力データ:\ref{eval53},出力結果:\ref{reval53})
+\lstinputlisting[caption=eval5-3.txtresult.txt,label=reval53]{../nn/nn_num/src/data.level3.3/eval5-3.txtresult.txt}
+結果を見ると先程よりは確立は低いが,3であると認識されてしまっていた．
+ただし五であるという認識が先程よりはやや上がっている．
+
+では最後に,五の中心の四角形の部分を全て1で埋め尽くした場合の挙動を確認する．
+(入力データ:\ref{eval510},出力結果:\ref{reval510})
+\lstinputlisting[caption=eval5-10.txtresult.txt,label=reval510]{../nn/nn_num/src/data.level3.3/eval5-10.txtresult.txt}
+結果では1であると認識されていた．
+今回このデータがなぜ1であると認識されたかは十分に推測できなかったが,
+学習用データからずれていくに連れて文字を誤認識する確率が上昇するという仮説が正しかったことが立証出来た．
+
 \subsubsection{考察}
+今回の結果から,学習したデータとのずれが大きいほど誤認識していくことが解った．
+しかし「ずれ」は人間が考えているものとは別の物である．
+
+
+人間が読み取れるレベルと計算機が学習によって獲得する,そのものであると認識出来る力にはやはり隔たりがある．
+今回の文字認識プログラムnn\_numにおいては,場所とサイズ.また構成要素である直線の向きや本数に応じて認識力が変化していく．
+その為,極端に場所やサイズが変更されたデータが入った場合,もはやデータの属するものがなんであるのかの検討がつかなくなっていた．
+故に今回のプログラムでは,如実に教師用データとの違いが出力結果に反映されてしまう事が確認できた．
+もし手書き文字を実際にこのプログラムで認識させる場合,アルゴリズムは改良する必要があるだろう．
