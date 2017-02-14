@@ -42,11 +42,14 @@ void usage();
 int main(argc,argv)
 	int	argc;
 	char **argv;
+
 {
   int	i,j,ite,ctg;
   double err,sum;
   int seed;
-
+    FILE *fp;   //ファイル
+    fp = fopen("ex.txt","a");   //ファイルオープン
+    
   if( argc != 5 ){
     usage();
   }else{
@@ -124,6 +127,7 @@ int main(argc,argv)
 	}
     }
     fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
+      fprintf(fp, "%4d %.10f\n",ite,err); //ファイルへの書き込み
     if((err<MIN_ERR)||(ite==ITERATIONS)){
       for(ctg=0;ctg<CTG;ctg++){
 	fprintf(stdout,"ctg[%d] : ",ctg);
@@ -141,7 +145,7 @@ int main(argc,argv)
 	  fprintf(stdout,"o[%d] = %1.5f, t[%d] = %1.1f\n",j,o_lay[j],j,teach[ctg][j]);
 	}
       }
-      fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
+      fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);        
       break;
     }
   }
@@ -151,6 +155,7 @@ int main(argc,argv)
     fprintf(stderr,"FINISH 1: iteration = %4d, error = %.10f\n",ite,err);
   }
 
+    fclose(fp); //ファイルクローズ
   return 0;
 }
 
