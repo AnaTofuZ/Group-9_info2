@@ -2,18 +2,18 @@
 #include<math.h>
 #include<stdlib.h>
 
-#define LAYER	3 /* ¥ì¥¤¥ä¡¼¿ô¡ÊÆşÎÏ¡¦Ãæ´Ö¡¦½ĞÎÏÁØ¡Ë */
-#define INPUT	2 /* ÆşÎÏÁØ¤Î¥Ë¥å¡¼¥í¥ó¡ÊÆşÎÏ¿®¹æ¡Ë¿ô */
-#define OUTPUT	1 /* ½ĞÎÏÁØ¤Î¥Ë¥å¡¼¥í¥ó¿ô */
-#define CTG	4 /* ³Ø½¬»öÎã¿ô */
+#define LAYER	3 /* ãƒ¬ã‚¤ãƒ¤ãƒ¼æ•°ï¼ˆå…¥åŠ›ãƒ»ä¸­é–“ãƒ»å‡ºåŠ›å±¤ï¼‰ */
+#define INPUT	2 /* å…¥åŠ›å±¤ã®ãƒ‹ãƒ¥ãƒ¼ãƒ­ãƒ³ï¼ˆå…¥åŠ›ä¿¡å·ï¼‰æ•° */
+#define OUTPUT	1 /* å‡ºåŠ›å±¤ã®ãƒ‹ãƒ¥ãƒ¼ãƒ­ãƒ³æ•° */
+#define CTG	4 /* å­¦ç¿’äº‹ä¾‹æ•° */
 
-#define ITERATIONS	100000 /* ³Ø½¬²ó¿ô¡Ê½ªÎ»¾ò·ï1¡Ë */
+#define ITERATIONS	100000 /* å­¦ç¿’å›æ•°ï¼ˆçµ‚äº†æ¡ä»¶1ï¼‰ */
 
-//#define ETA	1.50   /* ³Ø½¬·¸¿ô(0°Ê¾å¤Î¼Â¿ô) */
-//#define ALPHA	0.90   /* ´·À­¹à(0¡Á1¤Î¼Â¿ô) */
-//#define HIDDEN	5 /* Ãæ´ÖÁØ¤Î¥Ë¥å¡¼¥í¥ó¿ô */
-#define WD	2.00   /* ½Å¤ß½é´ü²½ÍÑ */
-#define MIN_ERR	0.0001 /* ºÇ¾¯¸íº¹¡Ê½ªÎ»¾ò·ï2¡Ë */
+//#define ETA	1.50   /* å­¦ç¿’ä¿‚æ•°(0ä»¥ä¸Šã®å®Ÿæ•°) */
+//#define ALPHA	0.90   /* æ…£æ€§é …(0ã€œ1ã®å®Ÿæ•°) */
+//#define HIDDEN	5 /* ä¸­é–“å±¤ã®ãƒ‹ãƒ¥ãƒ¼ãƒ­ãƒ³æ•° */
+#define WD	2.00   /* é‡ã¿åˆæœŸåŒ–ç”¨ */
+#define MIN_ERR	0.0001 /* æœ€å°‘èª¤å·®ï¼ˆçµ‚äº†æ¡ä»¶2ï¼‰ */
 
 #define ON		0.9
 #define OFF		0.1
@@ -42,11 +42,14 @@ void usage();
 int main(argc,argv)
 	int	argc;
 	char **argv;
+
 {
   int	i,j,ite,ctg;
   double err,sum;
   int seed;
-
+    FILE *fp;   //ãƒ•ã‚¡ã‚¤ãƒ«
+    fp = fopen("ex.txt","a");   //ãƒ•ã‚¡ã‚¤ãƒ«ã‚ªãƒ¼ãƒ—ãƒ³
+    
   if( argc != 5 ){
     usage();
   }else{
@@ -76,7 +79,7 @@ int main(argc,argv)
   i_lay[0][0]=OFF; i_lay[0][1]=OFF; i_lay[0][2]=ON; teach[0][0]=OFF;
   i_lay[1][0]=ON;  i_lay[1][1]=OFF; i_lay[1][2]=ON; teach[1][0]=ON;
   i_lay[2][0]=OFF; i_lay[2][1]=ON;  i_lay[2][2]=ON; teach[2][0]=ON;
-  i_lay[3][0]=ON; i_lay[3][1]=ON;  i_lay[3][2]=ON; teach[3][0]=ON;
+  i_lay[3][0]=ON; i_lay[3][1]=ON;  i_lay[3][2]=ON; teach[3][0]=OFF;
 
   h_lay[HIDDEN]=ON;
 	
@@ -124,6 +127,7 @@ int main(argc,argv)
 	}
     }
     fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
+      fprintf(fp, "%4d %.10f\n",ite,err); //ãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®æ›¸ãè¾¼ã¿
     if((err<MIN_ERR)||(ite==ITERATIONS)){
       for(ctg=0;ctg<CTG;ctg++){
 	fprintf(stdout,"ctg[%d] : ",ctg);
@@ -141,7 +145,7 @@ int main(argc,argv)
 	  fprintf(stdout,"o[%d] = %1.5f, t[%d] = %1.1f\n",j,o_lay[j],j,teach[ctg][j]);
 	}
       }
-      fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
+      fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);        
       break;
     }
   }
@@ -151,6 +155,7 @@ int main(argc,argv)
     fprintf(stderr,"FINISH 1: iteration = %4d, error = %.10f\n",ite,err);
   }
 
+    fclose(fp); //ãƒ•ã‚¡ã‚¤ãƒ«ã‚¯ãƒ­ãƒ¼ã‚º
   return 0;
 }
 

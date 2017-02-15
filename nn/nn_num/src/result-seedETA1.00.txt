@@ -1,0 +1,1208 @@
+teach[0] = 1000000000
+00000000000000000
+00011111111111100
+00000000100000000
+00111111111111100
+00100000100000100
+00101110101110100
+00100000100000100
+00101110101110100
+00100000100000100
+00000011111000000
+00001110001110000
+00111001110011100
+01110000000001110
+00001111111110000
+00000000100010000
+00000000100010000
+00000000100110000
+00000000100000000
+00000000000000000
+teach[1] = 0100000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[2] = 0010000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00011111111111000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[3] = 0001000000
+00000000000000000
+00000000000000000
+00000000000000000
+00111111111111100
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00001111111110000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[4] = 0000100000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+01000010010000010
+01000010010000010
+01000100010000010
+01000100010001010
+01001000001111010
+01110000000000010
+01000000000000010
+01000000000000010
+01000000000000010
+01000000000000010
+01111111111111110
+01000000000000010
+00000000000000000
+00000000000000000
+00000000000000000
+teach[5] = 0000010000
+00000000000000000
+00000000000000000
+00000000000000000
+00111111111111100
+00000000100000000
+00000000100000000
+00000000100000000
+00000001000000000
+00000001000000000
+00001111111110000
+00000010000010000
+00000100000010000
+00000100000010000
+00001000000010000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[6] = 0000001000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000100000000
+00000000100000000
+00111111111111100
+00000000000000000
+00000110000100000
+00000100000100000
+00001100000110000
+00011000000011000
+00011000000011000
+00110000000001100
+01100000000000110
+01100000000000110
+01000000000000010
+00000000000000000
+00000000000000000
+00000000000000000
+teach[7] = 0000000100
+00000000000000000
+00000000000000000
+00000000000000000
+00010000000000000
+00010000000000000
+00010000000111110
+00010001111000000
+00011110000000000
+00110000000000000
+01010000000000000
+00010000000000000
+00010000000001000
+00010000000001000
+00010000000001000
+00011111111110000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[8] = 0000000010
+00000000000000000
+00000000000000000
+00000000000000000
+00000001111000000
+00000000001000000
+00000010001000000
+00000010001000000
+00000110000100000
+00000100000100000
+00001100000110000
+00011000000011000
+00011000000011000
+00110000000001100
+01100000000000110
+01100000000000110
+01000000000000010
+00000000000000000
+00000000000000000
+00000000000000000
+teach[9] = 0000000001
+00000000000000000
+00000000000000000
+00000001000000000
+00000001000000000
+00111111111100000
+00000011000100000
+00000010000100000
+00000110000100000
+00000100000100000
+00001100000100000
+00011000000100000
+00011000000100000
+00110000000100100
+01100000000100100
+01100000000111000
+01000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+  ===== USAGE =====
+  learn: nn> l
+  check: nn> c
+  evaluation: nn> e
+       after that, input filename defined test-pattern
+  =================
+nn> 
+iteration =    1 error = 0.4575741808
+iteration =    2 error = 0.3228604413
+iteration =    3 error = 0.3095669726
+iteration =    4 error = 0.3033233592
+iteration =    5 error = 0.2974560351
+iteration =    6 error = 0.2916819642
+iteration =    7 error = 0.2858122973
+iteration =    8 error = 0.2798505850
+iteration =    9 error = 0.2738641635
+iteration =   10 error = 0.2677111153
+iteration =   11 error = 0.2608793341
+iteration =   12 error = 0.2528779654
+iteration =   13 error = 0.2444454137
+iteration =   14 error = 0.2358554880
+iteration =   15 error = 0.2271305969
+iteration =   16 error = 0.2185877349
+iteration =   17 error = 0.2106555645
+iteration =   18 error = 0.2036047273
+iteration =   19 error = 0.1975057457
+iteration =   20 error = 0.1921925630
+iteration =   21 error = 0.1874770542
+iteration =   22 error = 0.1830588658
+iteration =   23 error = 0.1789334740
+iteration =   24 error = 0.1747682396
+iteration =   25 error = 0.1709188432
+iteration =   26 error = 0.1665456435
+iteration =   27 error = 0.1630926943
+iteration =   28 error = 0.1579375321
+iteration =   29 error = 0.1554264097
+iteration =   30 error = 0.1498135532
+iteration =   31 error = 0.1460945007
+iteration =   32 error = 0.1410088555
+iteration =   33 error = 0.1372171195
+iteration =   34 error = 0.1333768810
+iteration =   35 error = 0.1300133414
+iteration =   36 error = 0.1267549537
+iteration =   37 error = 0.1237279788
+iteration =   38 error = 0.1209049113
+iteration =   39 error = 0.1182071389
+iteration =   40 error = 0.1156351167
+iteration =   41 error = 0.1131625373
+iteration =   42 error = 0.1107695489
+iteration =   43 error = 0.1084429471
+iteration =   44 error = 0.1061718431
+iteration =   45 error = 0.1039483939
+iteration =   46 error = 0.1017661711
+iteration =   47 error = 0.0996197010
+iteration =   48 error = 0.0975053329
+iteration =   49 error = 0.0954174283
+iteration =   50 error = 0.0933519266
+iteration =   51 error = 0.0913052484
+iteration =   52 error = 0.0892732495
+iteration =   53 error = 0.0872518936
+iteration =   54 error = 0.0852367947
+iteration =   55 error = 0.0832233150
+iteration =   56 error = 0.0812037779
+iteration =   57 error = 0.0791736577
+iteration =   58 error = 0.0771175968
+iteration =   59 error = 0.0750488234
+iteration =   60 error = 0.0729597401
+iteration =   61 error = 0.0710669482
+iteration =   62 error = 0.0697385813
+iteration =   63 error = 0.0683929913
+iteration =   64 error = 0.0639913253
+iteration =   65 error = 0.0626137959
+iteration =   66 error = 0.0609800115
+iteration =   67 error = 0.0596111520
+iteration =   68 error = 0.0548135055
+iteration =   69 error = 0.0532373821
+iteration =   70 error = 0.0515169096
+iteration =   71 error = 0.0497897849
+iteration =   72 error = 0.0462642591
+iteration =   73 error = 0.0451391467
+iteration =   74 error = 0.0428957607
+iteration =   75 error = 0.0419915847
+iteration =   76 error = 0.0393689889
+iteration =   77 error = 0.0387520878
+iteration =   78 error = 0.0367815185
+iteration =   79 error = 0.0363013790
+iteration =   80 error = 0.0343530026
+iteration =   81 error = 0.0339798540
+iteration =   82 error = 0.0324489897
+iteration =   83 error = 0.0321532137
+iteration =   84 error = 0.0307053916
+iteration =   85 error = 0.0304495473
+iteration =   86 error = 0.0292709997
+iteration =   87 error = 0.0290568768
+iteration =   88 error = 0.0279641446
+iteration =   89 error = 0.0277663059
+iteration =   90 error = 0.0268515108
+iteration =   91 error = 0.0266764660
+iteration =   92 error = 0.0258423124
+iteration =   93 error = 0.0256765480
+iteration =   94 error = 0.0249597166
+iteration =   95 error = 0.0248073807
+iteration =   96 error = 0.0241614125
+iteration =   97 error = 0.0240170936
+iteration =   98 error = 0.0234495971
+iteration =   99 error = 0.0233147881
+iteration =  100 error = 0.0228055973
+iteration =  101 error = 0.0226788203
+iteration =  102 error = 0.0222245379
+iteration =  103 error = 0.0221062083
+iteration =  104 error = 0.0216974731
+iteration =  105 error = 0.0215875626
+iteration =  106 error = 0.0212191291
+iteration =  107 error = 0.0211181643
+iteration =  108 error = 0.0207845927
+iteration =  109 error = 0.0206935149
+iteration =  110 error = 0.0203906463
+iteration =  111 error = 0.0203113789
+iteration =  112 error = 0.0200359096
+iteration =  113 error = 0.0199723579
+iteration =  114 error = 0.0197221308
+iteration =  115 error = 0.0196824507
+iteration =  116 error = 0.0194563748
+iteration =  117 error = 0.0194577463
+iteration =  118 error = 0.0192539126
+iteration =  119 error = 0.0193311481
+iteration =  120 error = 0.0191372878
+iteration =  121 error = 0.0193513502
+iteration =  122 error = 0.0191166920
+iteration =  123 error = 0.0195385467
+iteration =  124 error = 0.0191391610
+iteration =  125 error = 0.0197706135
+iteration =  126 error = 0.0190708357
+iteration =  127 error = 0.0197703616
+iteration =  128 error = 0.0188298633
+iteration =  129 error = 0.0194239675
+iteration =  130 error = 0.0184928996
+iteration =  131 error = 0.0189364516
+iteration =  132 error = 0.0181683694
+iteration =  133 error = 0.0185041552
+iteration =  134 error = 0.0178988132
+iteration =  135 error = 0.0181735271
+iteration =  136 error = 0.0176814555
+iteration =  137 error = 0.0179259759
+iteration =  138 error = 0.0175021385
+iteration =  139 error = 0.0177350815
+iteration =  140 error = 0.0173487981
+iteration =  141 error = 0.0175810073
+iteration =  142 error = 0.0172129583
+iteration =  143 error = 0.0174501306
+iteration =  144 error = 0.0170887301
+iteration =  145 error = 0.0173329672
+iteration =  146 error = 0.0169719793
+iteration =  147 error = 0.0172228895
+iteration =  148 error = 0.0168599418
+iteration =  149 error = 0.0171156280
+iteration =  150 error = 0.0167510340
+iteration =  151 error = 0.0170090129
+iteration =  152 error = 0.0166446465
+iteration =  153 error = 0.0169025977
+iteration =  154 error = 0.0165408510
+iteration =  155 error = 0.0167970830
+iteration =  156 error = 0.0164400690
+iteration =  157 error = 0.0166936792
+iteration =  158 error = 0.0163427875
+iteration =  159 error = 0.0165935865
+iteration =  160 error = 0.0162493771
+iteration =  161 error = 0.0164976903
+iteration =  162 error = 0.0161600162
+iteration =  163 error = 0.0164064562
+iteration =  164 error = 0.0160746904
+iteration =  165 error = 0.0163199600
+iteration =  166 error = 0.0159932317
+iteration =  167 error = 0.0162379802
+iteration =  168 error = 0.0159153694
+iteration =  169 error = 0.0161601042
+iteration =  170 error = 0.0158407794
+iteration =  171 error = 0.0160858242
+iteration =  172 error = 0.0157691244
+iteration =  173 error = 0.0160146143
+iteration =  174 error = 0.0157000836
+iteration =  175 error = 0.0159459862
+iteration =  176 error = 0.0156333728
+iteration =  177 error = 0.0158795249
+iteration =  178 error = 0.0155687544
+iteration =  179 error = 0.0158149059
+iteration =  180 error = 0.0155060404
+iteration =  181 error = 0.0157518975
+iteration =  182 error = 0.0154450880
+iteration =  183 error = 0.0156903501
+iteration =  184 error = 0.0153857915
+iteration =  185 error = 0.0156301789
+iteration =  186 error = 0.0153280725
+iteration =  187 error = 0.0155713428
+iteration =  188 error = 0.0152718698
+iteration =  189 error = 0.0155138249
+iteration =  190 error = 0.0152171302
+iteration =  191 error = 0.0154576156
+iteration =  192 error = 0.0151638031
+iteration =  193 error = 0.0154027018
+iteration =  194 error = 0.0151118357
+iteration =  195 error = 0.0153490598
+iteration =  196 error = 0.0150611719
+iteration =  197 error = 0.0152966534
+iteration =  198 error = 0.0150117517
+iteration =  199 error = 0.0152454346
+iteration =  200 error = 0.0149635127
+iteration =  201 error = 0.0151953469
+iteration =  202 error = 0.0149163913
+iteration =  203 error = 0.0151463281
+iteration =  204 error = 0.0148703246
+iteration =  205 error = 0.0150983143
+iteration =  206 error = 0.0148252515
+iteration =  207 error = 0.0150512426
+iteration =  208 error = 0.0147811139
+iteration =  209 error = 0.0150050534
+iteration =  210 error = 0.0147378575
+iteration =  211 error = 0.0149596915
+iteration =  212 error = 0.0146954316
+iteration =  213 error = 0.0149151062
+iteration =  214 error = 0.0146537896
+iteration =  215 error = 0.0148712519
+iteration =  216 error = 0.0146128881
+iteration =  217 error = 0.0148280866
+iteration =  218 error = 0.0145726870
+iteration =  219 error = 0.0147855723
+iteration =  220 error = 0.0145331487
+iteration =  221 error = 0.0147436732
+iteration =  222 error = 0.0144942379
+iteration =  223 error = 0.0147023561
+iteration =  224 error = 0.0144559213
+iteration =  225 error = 0.0146615891
+iteration =  226 error = 0.0144181673
+iteration =  227 error = 0.0146213418
+iteration =  228 error = 0.0143809457
+iteration =  229 error = 0.0145815852
+iteration =  230 error = 0.0143442278
+iteration =  231 error = 0.0145422912
+iteration =  232 error = 0.0143079865
+iteration =  233 error = 0.0145034333
+iteration =  234 error = 0.0142721960
+iteration =  235 error = 0.0144649862
+iteration =  236 error = 0.0142368319
+iteration =  237 error = 0.0144269263
+iteration =  238 error = 0.0142018713
+iteration =  239 error = 0.0143892314
+iteration =  240 error = 0.0141672928
+iteration =  241 error = 0.0143518809
+iteration =  242 error = 0.0141330763
+iteration =  243 error = 0.0143148561
+iteration =  244 error = 0.0140992033
+iteration =  245 error = 0.0142781396
+iteration =  246 error = 0.0140656563
+iteration =  247 error = 0.0142417158
+iteration =  248 error = 0.0140324196
+iteration =  249 error = 0.0142055705
+iteration =  250 error = 0.0139994781
+iteration =  251 error = 0.0141696908
+iteration =  252 error = 0.0139668184
+iteration =  253 error = 0.0141340651
+iteration =  254 error = 0.0139344278
+iteration =  255 error = 0.0140986832
+iteration =  256 error = 0.0139022949
+iteration =  257 error = 0.0140635359
+iteration =  258 error = 0.0138704092
+iteration =  259 error = 0.0140286150
+iteration =  260 error = 0.0138387608
+iteration =  261 error = 0.0139939134
+iteration =  262 error = 0.0138073412
+iteration =  263 error = 0.0139594250
+iteration =  264 error = 0.0137761423
+iteration =  265 error = 0.0139251443
+iteration =  266 error = 0.0137451570
+iteration =  267 error = 0.0138910670
+iteration =  268 error = 0.0137143789
+iteration =  269 error = 0.0138571892
+iteration =  270 error = 0.0136838023
+iteration =  271 error = 0.0138235081
+iteration =  272 error = 0.0136534223
+iteration =  273 error = 0.0137900215
+iteration =  274 error = 0.0136232345
+iteration =  275 error = 0.0137567278
+iteration =  276 error = 0.0135932355
+iteration =  277 error = 0.0137236263
+iteration =  278 error = 0.0135634224
+iteration =  279 error = 0.0136907169
+iteration =  280 error = 0.0135337932
+iteration =  281 error = 0.0136580004
+iteration =  282 error = 0.0135043467
+iteration =  283 error = 0.0136254786
+iteration =  284 error = 0.0134750828
+iteration =  285 error = 0.0135931541
+iteration =  286 error = 0.0134460027
+iteration =  287 error = 0.0135610312
+iteration =  288 error = 0.0134171091
+iteration =  289 error = 0.0135291161
+iteration =  290 error = 0.0133884074
+iteration =  291 error = 0.0134974175
+iteration =  292 error = 0.0133599059
+iteration =  293 error = 0.0134659483
+iteration =  294 error = 0.0133316178
+iteration =  295 error = 0.0134347270
+iteration =  296 error = 0.0133035637
+iteration =  297 error = 0.0134037814
+iteration =  298 error = 0.0132757753
+iteration =  299 error = 0.0133731535
+iteration =  300 error = 0.0132483022
+iteration =  301 error = 0.0133429086
+iteration =  302 error = 0.0132212232
+iteration =  303 error = 0.0133131506
+iteration =  304 error = 0.0131946645
+iteration =  305 error = 0.0132840473
+iteration =  306 error = 0.0131688321
+iteration =  307 error = 0.0132558761
+iteration =  308 error = 0.0131440642
+iteration =  309 error = 0.0132290990
+iteration =  310 error = 0.0131209175
+iteration =  311 error = 0.0132044857
+iteration =  312 error = 0.0131002907
+iteration =  313 error = 0.0131832880
+iteration =  314 error = 0.0130835584
+iteration =  315 error = 0.0131674055
+iteration =  316 error = 0.0130725619
+iteration =  317 error = 0.0131592632
+iteration =  318 error = 0.0130690004
+iteration =  319 error = 0.0131606401
+iteration =  320 error = 0.0130724467
+iteration =  321 error = 0.0131694562
+iteration =  322 error = 0.0130771748
+iteration =  323 error = 0.0131759657
+iteration =  324 error = 0.0130722369
+iteration =  325 error = 0.0131660871
+iteration =  326 error = 0.0130504783
+iteration =  327 error = 0.0131353531
+iteration =  328 error = 0.0130169688
+iteration =  329 error = 0.0130943037
+iteration =  330 error = 0.0129823127
+iteration =  331 error = 0.0130555430
+iteration =  332 error = 0.0129528054
+iteration =  333 error = 0.0130244975
+iteration =  334 error = 0.0129295249
+iteration =  335 error = 0.0130009715
+iteration =  336 error = 0.0129108556
+iteration =  337 error = 0.0129822690
+iteration =  338 error = 0.0128941326
+iteration =  339 error = 0.0129648848
+iteration =  340 error = 0.0128767334
+iteration =  341 error = 0.0129458316
+iteration =  342 error = 0.0128571282
+iteration =  343 error = 0.0129238385
+iteration =  344 error = 0.0128353962
+iteration =  345 error = 0.0128995948
+iteration =  346 error = 0.0128127339
+iteration =  347 error = 0.0128747834
+iteration =  348 error = 0.0127904313
+iteration =  349 error = 0.0128508185
+iteration =  350 error = 0.0127691580
+iteration =  351 error = 0.0128282072
+iteration =  352 error = 0.0127488516
+iteration =  353 error = 0.0128066244
+iteration =  354 error = 0.0127290006
+iteration =  355 error = 0.0127853538
+iteration =  356 error = 0.0127090386
+iteration =  357 error = 0.0127637623
+iteration =  358 error = 0.0126886424
+iteration =  359 error = 0.0127415903
+iteration =  360 error = 0.0126678198
+iteration =  361 error = 0.0127189647
+iteration =  362 error = 0.0126467967
+iteration =  363 error = 0.0126962024
+iteration =  364 error = 0.0126258223
+iteration =  365 error = 0.0126735759
+iteration =  366 error = 0.0126050287
+iteration =  367 error = 0.0126511836
+iteration =  368 error = 0.0125843999
+iteration =  369 error = 0.0126289567
+iteration =  370 error = 0.0125638282
+iteration =  371 error = 0.0126067498
+iteration =  372 error = 0.0125431990
+iteration =  373 error = 0.0125844403
+iteration =  374 error = 0.0125224507
+iteration =  375 error = 0.0125619823
+iteration =  376 error = 0.0125015863
+iteration =  377 error = 0.0125394025
+iteration =  378 error = 0.0124806485
+iteration =  379 error = 0.0125167595
+iteration =  380 error = 0.0124596821
+iteration =  381 error = 0.0124941014
+iteration =  382 error = 0.0124387084
+iteration =  383 error = 0.0124714429
+iteration =  384 error = 0.0124177208
+iteration =  385 error = 0.0124487682
+iteration =  386 error = 0.0123966955
+iteration =  387 error = 0.0124260480
+iteration =  388 error = 0.0123756077
+iteration =  389 error = 0.0124032567
+iteration =  390 error = 0.0123544415
+iteration =  391 error = 0.0123803820
+iteration =  392 error = 0.0123331925
+iteration =  393 error = 0.0123574241
+iteration =  394 error = 0.0123118635
+iteration =  395 error = 0.0123343890
+iteration =  396 error = 0.0122904581
+iteration =  397 error = 0.0123112816
+iteration =  398 error = 0.0122689763
+iteration =  399 error = 0.0122881017
+iteration =  400 error = 0.0122474131
+iteration =  401 error = 0.0122648434
+iteration =  402 error = 0.0122257602
+iteration =  403 error = 0.0122414979
+iteration =  404 error = 0.0122040076
+iteration =  405 error = 0.0122180556
+iteration =  406 error = 0.0121821460
+iteration =  407 error = 0.0121945079
+iteration =  408 error = 0.0121601670
+iteration =  409 error = 0.0121708478
+iteration =  410 error = 0.0121380631
+iteration =  411 error = 0.0121470688
+iteration =  412 error = 0.0121158269
+iteration =  413 error = 0.0121231645
+iteration =  414 error = 0.0120934504
+iteration =  415 error = 0.0120991277
+iteration =  416 error = 0.0120709243
+iteration =  417 error = 0.0120749498
+iteration =  418 error = 0.0120482384
+iteration =  419 error = 0.0120506213
+iteration =  420 error = 0.0120253814
+iteration =  421 error = 0.0120261319
+iteration =  422 error = 0.0120023412
+iteration =  423 error = 0.0120014707
+iteration =  424 error = 0.0119791051
+iteration =  425 error = 0.0119766266
+iteration =  426 error = 0.0119556601
+iteration =  427 error = 0.0119515879
+iteration =  428 error = 0.0119319928
+iteration =  429 error = 0.0119263432
+iteration =  430 error = 0.0119080891
+iteration =  431 error = 0.0119008805
+iteration =  432 error = 0.0118839348
+iteration =  433 error = 0.0118751879
+iteration =  434 error = 0.0118595152
+iteration =  435 error = 0.0118492534
+iteration =  436 error = 0.0118348156
+iteration =  437 error = 0.0118230648
+iteration =  438 error = 0.0118098207
+iteration =  439 error = 0.0117966103
+iteration =  440 error = 0.0117845155
+iteration =  441 error = 0.0117698784
+iteration =  442 error = 0.0117588851
+iteration =  443 error = 0.0117428577
+iteration =  444 error = 0.0117329147
+iteration =  445 error = 0.0117155377
+iteration =  446 error = 0.0117065902
+iteration =  447 error = 0.0116879083
+iteration =  448 error = 0.0116798977
+iteration =  449 error = 0.0116599604
+iteration =  450 error = 0.0116528243
+iteration =  451 error = 0.0116316858
+iteration =  452 error = 0.0116253580
+iteration =  453 error = 0.0116030774
+iteration =  454 error = 0.0115974880
+iteration =  455 error = 0.0115741293
+iteration =  456 error = 0.0115692045
+iteration =  457 error = 0.0115448369
+iteration =  458 error = 0.0115404995
+iteration =  459 error = 0.0115151972
+iteration =  460 error = 0.0115113667
+iteration =  461 error = 0.0114852091
+iteration =  462 error = 0.0114818019
+iteration =  463 error = 0.0114548729
+iteration =  464 error = 0.0114518029
+iteration =  465 error = 0.0114241912
+iteration =  466 error = 0.0114213704
+iteration =  467 error = 0.0113931690
+iteration =  468 error = 0.0113905077
+iteration =  469 error = 0.0113618132
+iteration =  470 error = 0.0113592215
+iteration =  471 error = 0.0113301338
+iteration =  472 error = 0.0113275216
+iteration =  473 error = 0.0112981432
+iteration =  474 error = 0.0112954219
+iteration =  475 error = 0.0112658568
+iteration =  476 error = 0.0112629402
+iteration =  477 error = 0.0112332934
+iteration =  478 error = 0.0112300985
+iteration =  479 error = 0.0112004745
+iteration =  480 error = 0.0111969235
+iteration =  481 error = 0.0111674255
+iteration =  482 error = 0.0111634463
+iteration =  483 error = 0.0111341749
+iteration =  484 error = 0.0111297028
+iteration =  485 error = 0.0111007544
+iteration =  486 error = 0.0110957334
+iteration =  487 error = 0.0110671992
+iteration =  488 error = 0.0110615827
+iteration =  489 error = 0.0110335473
+iteration =  490 error = 0.0110272994
+iteration =  491 error = 0.0109998390
+iteration =  492 error = 0.0109929351
+iteration =  493 error = 0.0109661168
+iteration =  494 error = 0.0109585436
+iteration =  495 error = 0.0109324240
+iteration =  496 error = 0.0109241797
+iteration =  497 error = 0.0108988038
+iteration =  498 error = 0.0108898977
+iteration =  499 error = 0.0108652983
+iteration =  500 error = 0.0108557494
+iteration =  501 error = 0.0108319466
+iteration =  502 error = 0.0108217823
+iteration =  503 error = 0.0107987830
+iteration =  504 error = 0.0107880375
+iteration =  505 error = 0.0107658356
+iteration =  506 error = 0.0107545476
+iteration =  507 error = 0.0107331246
+iteration =  508 error = 0.0107213350
+iteration =  509 error = 0.0107006604
+iteration =  510 error = 0.0106884103
+iteration =  511 error = 0.0106684432
+iteration =  512 error = 0.0106557719
+iteration =  513 error = 0.0106364621
+iteration =  514 error = 0.0106234061
+iteration =  515 error = 0.0106046960
+iteration =  516 error = 0.0105912880
+iteration =  517 error = 0.0105731146
+iteration =  518 error = 0.0105593837
+iteration =  519 error = 0.0105416813
+iteration =  520 error = 0.0105276535
+iteration =  521 error = 0.0105103555
+iteration =  522 error = 0.0104960546
+iteration =  523 error = 0.0104790963
+iteration =  524 error = 0.0104645455
+iteration =  525 error = 0.0104478662
+iteration =  526 error = 0.0104330888
+iteration =  527 error = 0.0104166336
+iteration =  528 error = 0.0104016543
+iteration =  529 error = 0.0103853755
+iteration =  530 error = 0.0103702206
+iteration =  531 error = 0.0103540786
+iteration =  532 error = 0.0103387760
+iteration =  533 error = 0.0103227400
+iteration =  534 error = 0.0103073185
+iteration =  535 error = 0.0102913661
+iteration =  536 error = 0.0102758552
+iteration =  537 error = 0.0102599716
+iteration =  538 error = 0.0102444006
+iteration =  539 error = 0.0102285781
+iteration =  540 error = 0.0102129753
+iteration =  541 error = 0.0101972121
+iteration =  542 error = 0.0101816041
+iteration =  543 error = 0.0101659030
+iteration =  544 error = 0.0101503146
+iteration =  545 error = 0.0101346820
+iteration =  546 error = 0.0101191358
+iteration =  547 error = 0.0101035805
+iteration =  548 error = 0.0100880967
+iteration =  549 error = 0.0100726288
+iteration =  550 error = 0.0100572254
+iteration =  551 error = 0.0100418557
+iteration =  552 error = 0.0100265483
+iteration =  553 error = 0.0100112874
+iteration =  554 error = 0.0099960896
+iteration =  555 error = 0.0099809476
+iteration =  556 error = 0.0099658711
+iteration =  557 error = 0.0099508574
+iteration =  558 error = 0.0099359121
+iteration =  559 error = 0.0099210350
+iteration =  560 error = 0.0099062296
+iteration =  561 error = 0.0098914966
+iteration =  562 error = 0.0098768385
+iteration =  563 error = 0.0098622563
+iteration =  564 error = 0.0098477520
+iteration =  565 error = 0.0098333268
+iteration =  566 error = 0.0098189822
+iteration =  567 error = 0.0098047195
+iteration =  568 error = 0.0097905400
+iteration =  569 error = 0.0097764450
+iteration =  570 error = 0.0097624358
+iteration =  571 error = 0.0097485135
+iteration =  572 error = 0.0097346795
+iteration =  573 error = 0.0097209348
+iteration =  574 error = 0.0097072807
+iteration =  575 error = 0.0096937184
+iteration =  576 error = 0.0096802491
+iteration =  577 error = 0.0096668738
+iteration =  578 error = 0.0096535937
+iteration =  579 error = 0.0096404099
+iteration =  580 error = 0.0096273236
+iteration =  581 error = 0.0096143357
+iteration =  582 error = 0.0096014474
+iteration =  583 error = 0.0095886595
+iteration =  584 error = 0.0095759730
+iteration =  585 error = 0.0095633889
+iteration =  586 error = 0.0095509079
+iteration =  587 error = 0.0095385309
+iteration =  588 error = 0.0095262585
+iteration =  589 error = 0.0095140914
+iteration =  590 error = 0.0095020301
+iteration =  591 error = 0.0094900751
+iteration =  592 error = 0.0094782268
+iteration =  593 error = 0.0094664855
+iteration =  594 error = 0.0094548515
+iteration =  595 error = 0.0094433248
+iteration =  596 error = 0.0094319054
+iteration =  597 error = 0.0094205934
+iteration =  598 error = 0.0094093885
+iteration =  599 error = 0.0093982905
+iteration =  600 error = 0.0093872991
+iteration =  601 error = 0.0093764138
+iteration =  602 error = 0.0093656341
+iteration =  603 error = 0.0093549593
+iteration =  604 error = 0.0093443889
+iteration =  605 error = 0.0093339221
+iteration =  606 error = 0.0093235580
+iteration =  607 error = 0.0093132957
+iteration =  608 error = 0.0093031343
+iteration =  609 error = 0.0092930726
+iteration =  610 error = 0.0092831098
+iteration =  611 error = 0.0092732445
+iteration =  612 error = 0.0092634756
+iteration =  613 error = 0.0092538020
+iteration =  614 error = 0.0092442222
+iteration =  615 error = 0.0092347351
+iteration =  616 error = 0.0092253393
+iteration =  617 error = 0.0092160334
+iteration =  618 error = 0.0092068160
+iteration =  619 error = 0.0091976859
+iteration =  620 error = 0.0091886415
+iteration =  621 error = 0.0091796815
+iteration =  622 error = 0.0091708045
+iteration =  623 error = 0.0091620091
+iteration =  624 error = 0.0091532939
+iteration =  625 error = 0.0091446575
+iteration =  626 error = 0.0091360986
+iteration =  627 error = 0.0091276159
+iteration =  628 error = 0.0091192080
+iteration =  629 error = 0.0091108737
+iteration =  630 error = 0.0091026119
+iteration =  631 error = 0.0090944213
+iteration =  632 error = 0.0090863009
+iteration =  633 error = 0.0090782495
+iteration =  634 error = 0.0090702662
+iteration =  635 error = 0.0090623500
+iteration =  636 error = 0.0090545001
+iteration =  637 error = 0.0090467156
+iteration =  638 error = 0.0090389958
+iteration =  639 error = 0.0090313401
+iteration =  640 error = 0.0090237478
+iteration =  641 error = 0.0090162183
+iteration =  642 error = 0.0090087512
+iteration =  643 error = 0.0090013459
+iteration =  644 error = 0.0089940022
+iteration =  645 error = 0.0089867196
+iteration =  646 error = 0.0089794979
+iteration =  647 error = 0.0089723366
+iteration =  648 error = 0.0089652355
+iteration =  649 error = 0.0089581943
+iteration =  650 error = 0.0089512127
+iteration =  651 error = 0.0089442903
+iteration =  652 error = 0.0089374269
+iteration =  653 error = 0.0089306220
+iteration =  654 error = 0.0089238752
+iteration =  655 error = 0.0089171860
+iteration =  656 error = 0.0089105540
+iteration =  657 error = 0.0089039784
+iteration =  658 error = 0.0088974587
+iteration =  659 error = 0.0088909941
+iteration =  660 error = 0.0088845840
+iteration =  661 error = 0.0088782275
+iteration =  662 error = 0.0088719237
+iteration =  663 error = 0.0088656718
+iteration =  664 error = 0.0088594707
+iteration =  665 error = 0.0088533196
+iteration =  666 error = 0.0088472174
+iteration =  667 error = 0.0088411632
+iteration =  668 error = 0.0088351558
+iteration =  669 error = 0.0088291942
+iteration =  670 error = 0.0088232773
+iteration =  671 error = 0.0088174042
+iteration =  672 error = 0.0088115737
+iteration =  673 error = 0.0088057847
+iteration =  674 error = 0.0088000363
+iteration =  675 error = 0.0087943274
+iteration =  676 error = 0.0087886569
+iteration =  677 error = 0.0087830237
+iteration =  678 error = 0.0087774270
+iteration =  679 error = 0.0087718656
+iteration =  680 error = 0.0087663385
+iteration =  681 error = 0.0087608447
+iteration =  682 error = 0.0087553831
+iteration =  683 error = 0.0087499529
+iteration =  684 error = 0.0087445529
+iteration =  685 error = 0.0087391821
+iteration =  686 error = 0.0087338395
+iteration =  687 error = 0.0087285240
+iteration =  688 error = 0.0087232347
+iteration =  689 error = 0.0087179704
+iteration =  690 error = 0.0087127300
+iteration =  691 error = 0.0087075125
+iteration =  692 error = 0.0087023168
+iteration =  693 error = 0.0086971417
+iteration =  694 error = 0.0086919860
+iteration =  695 error = 0.0086868486
+iteration =  696 error = 0.0086817283
+iteration =  697 error = 0.0086766238
+iteration =  698 error = 0.0086715339
+iteration =  699 error = 0.0086664572
+iteration =  700 error = 0.0086613924
+iteration =  701 error = 0.0086563382
+iteration =  702 error = 0.0086512931
+iteration =  703 error = 0.0086462557
+iteration =  704 error = 0.0086412246
+iteration =  705 error = 0.0086361981
+iteration =  706 error = 0.0086311749
+iteration =  707 error = 0.0086261532
+iteration =  708 error = 0.0086211315
+iteration =  709 error = 0.0086161081
+iteration =  710 error = 0.0086110813
+iteration =  711 error = 0.0086060494
+iteration =  712 error = 0.0086010107
+iteration =  713 error = 0.0085959634
+iteration =  714 error = 0.0085909056
+iteration =  715 error = 0.0085858357
+iteration =  716 error = 0.0085807517
+iteration =  717 error = 0.0085756518
+iteration =  718 error = 0.0085705341
+iteration =  719 error = 0.0085653970
+iteration =  720 error = 0.0085602384
+iteration =  721 error = 0.0085550567
+iteration =  722 error = 0.0085498501
+iteration =  723 error = 0.0085446168
+iteration =  724 error = 0.0085393552
+iteration =  725 error = 0.0085340636
+iteration =  726 error = 0.0085287405
+iteration =  727 error = 0.0085233845
+iteration =  728 error = 0.0085179942
+iteration =  729 error = 0.0085125684
+iteration =  730 error = 0.0085071060
+iteration =  731 error = 0.0085016061
+iteration =  732 error = 0.0084960679
+iteration =  733 error = 0.0084904908
+iteration =  734 error = 0.0084848745
+iteration =  735 error = 0.0084792187
+iteration =  736 error = 0.0084735235
+iteration =  737 error = 0.0084677891
+iteration =  738 error = 0.0084620162
+iteration =  739 error = 0.0084562055
+iteration =  740 error = 0.0084503581
+iteration =  741 error = 0.0084444753
+iteration =  742 error = 0.0084385586
+iteration =  743 error = 0.0084326100
+iteration =  744 error = 0.0084266315
+iteration =  745 error = 0.0084206254
+iteration =  746 error = 0.0084145944
+iteration =  747 error = 0.0084085412
+iteration =  748 error = 0.0084024687
+iteration =  749 error = 0.0083963801
+iteration =  750 error = 0.0083902785
+iteration =  751 error = 0.0083841672
+iteration =  752 error = 0.0083780495
+iteration =  753 error = 0.0083719288
+iteration =  754 error = 0.0083658084
+iteration =  755 error = 0.0083596915
+iteration =  756 error = 0.0083535813
+iteration =  757 error = 0.0083474806
+iteration =  758 error = 0.0083413923
+iteration =  759 error = 0.0083353190
+iteration =  760 error = 0.0083292631
+iteration =  761 error = 0.0083232267
+iteration =  762 error = 0.0083172116
+iteration =  763 error = 0.0083112195
+iteration =  764 error = 0.0083052517
+iteration =  765 error = 0.0082993093
+iteration =  766 error = 0.0082933931
+iteration =  767 error = 0.0082875037
+iteration =  768 error = 0.0082816414
+iteration =  769 error = 0.0082758064
+iteration =  770 error = 0.0082699985
+iteration =  771 error = 0.0082642175
+iteration =  772 error = 0.0082584630
+iteration =  773 error = 0.0082527345
+iteration =  774 error = 0.0082470313
+iteration =  775 error = 0.0082413526
+iteration =  776 error = 0.0082356976
+iteration =  777 error = 0.0082300653
+iteration =  778 error = 0.0082244550
+iteration =  779 error = 0.0082188655
+iteration =  780 error = 0.0082132959
+iteration =  781 error = 0.0082077451
+iteration =  782 error = 0.0082022122
+iteration =  783 error = 0.0081966962
+iteration =  784 error = 0.0081911959
+iteration =  785 error = 0.0081857106
+iteration =  786 error = 0.0081802391
+iteration =  787 error = 0.0081747806
+iteration =  788 error = 0.0081693341
+iteration =  789 error = 0.0081638987
+iteration =  790 error = 0.0081584736
+iteration =  791 error = 0.0081530578
+iteration =  792 error = 0.0081476506
+iteration =  793 error = 0.0081422511
+iteration =  794 error = 0.0081368586
+iteration =  795 error = 0.0081314722
+iteration =  796 error = 0.0081260913
+iteration =  797 error = 0.0081207150
+iteration =  798 error = 0.0081153426
+iteration =  799 error = 0.0081099735
+iteration =  800 error = 0.0081046070
+iteration =  801 error = 0.0080992423
+iteration =  802 error = 0.0080938788
+iteration =  803 error = 0.0080885158
+iteration =  804 error = 0.0080831527
+iteration =  805 error = 0.0080777888
+iteration =  806 error = 0.0080724235
+iteration =  807 error = 0.0080670561
+iteration =  808 error = 0.0080616861
+iteration =  809 error = 0.0080563128
+iteration =  810 error = 0.0080509356
+iteration =  811 error = 0.0080455539
+iteration =  812 error = 0.0080401671
+iteration =  813 error = 0.0080347745
+iteration =  814 error = 0.0080293756
+iteration =  815 error = 0.0080239697
+iteration =  816 error = 0.0080185563
+iteration =  817 error = 0.0080131348
+iteration =  818 error = 0.0080077045
+iteration =  819 error = 0.0080022648
+iteration =  820 error = 0.0079968151
+iteration =  821 error = 0.0079913549
+iteration =  822 error = 0.0079858835
+iteration =  823 error = 0.0079804002
+iteration =  824 error = 0.0079749045
+iteration =  825 error = 0.0079693958
+iteration =  826 error = 0.0079638733
+iteration =  827 error = 0.0079583365
+iteration =  828 error = 0.0079527848
+iteration =  829 error = 0.0079472174
+iteration =  830 error = 0.0079416338
+iteration =  831 error = 0.0079360332
+iteration =  832 error = 0.0079304150
+iteration =  833 error = 0.0079247785
+iteration =  834 error = 0.0079191230
+iteration =  835 error = 0.0079134479
+iteration =  836 error = 0.0079077524
+iteration =  837 error = 0.0079020357
+iteration =  838 error = 0.0078962973
+iteration =  839 error = 0.0078905362
+iteration =  840 error = 0.0078847518
+iteration =  841 error = 0.0078789434
+iteration =  842 error = 0.0078731100
+iteration =  843 error = 0.0078672509
+iteration =  844 error = 0.0078613654
+iteration =  845 error = 0.0078554525
+iteration =  846 error = 0.0078495115
+iteration =  847 error = 0.0078435414
+iteration =  848 error = 0.0078375414
+iteration =  849 error = 0.0078315106
+iteration =  850 error = 0.0078254480
+iteration =  851 error = 0.0078193528
+iteration =  852 error = 0.0078132240
+iteration =  853 error = 0.0078070605
+iteration =  854 error = 0.0078008614
+iteration =  855 error = 0.0077946257
+iteration =  856 error = 0.0077883522
+iteration =  857 error = 0.0077820400
+iteration =  858 error = 0.0077756879
+iteration =  859 error = 0.0077692948
+iteration =  860 error = 0.0077628595
+iteration =  861 error = 0.0077563808
+iteration =  862 error = 0.0077498575
+iteration =  863 error = 0.0077432884
+iteration =  864 error = 0.0077366721
+iteration =  865 error = 0.0077300074
+iteration =  866 error = 0.0077232929
+iteration =  867 error = 0.0077165273
+iteration =  868 error = 0.0077097090
+iteration =  869 error = 0.0077028366
+iteration =  870 error = 0.0076959087
+iteration =  871 error = 0.0076889237
+iteration =  872 error = 0.0076818800
+iteration =  873 error = 0.0076747760
+iteration =  874 error = 0.0076676100
+iteration =  875 error = 0.0076603803
+iteration =  876 error = 0.0076530852
+iteration =  877 error = 0.0076457229
+iteration =  878 error = 0.0076382915
+iteration =  879 error = 0.0076307892
+iteration =  880 error = 0.0076232139
+iteration =  881 error = 0.0076155637
+iteration =  882 error = 0.0076078366
+iteration =  883 error = 0.0076000305
+iteration =  884 error = 0.0075921433
+iteration =  885 error = 0.0075841726
+iteration =  886 error = 0.0075761165
+iteration =  887 error = 0.0075679724
+iteration =  888 error = 0.0075597382
+iteration =  889 error = 0.0075514114
+iteration =  890 error = 0.0075429896
+iteration =  891 error = 0.0075344704
+iteration =  892 error = 0.0075258512
+iteration =  893 error = 0.0075171296
+iteration =  894 error = 0.0075083029
+iteration =  895 error = 0.0074993685
+iteration =  896 error = 0.0074903239
+iteration =  897 error = 0.0074811664
+iteration =  898 error = 0.0074718934
+iteration =  899 error = 0.0074625023
+iteration =  900 error = 0.0074529906
+iteration =  901 error = 0.0074433556
+iteration =  902 error = 0.0074335950
+iteration =  903 error = 0.0074237062
+iteration =  904 error = 0.0074136870
+iteration =  905 error = 0.0074035353
+iteration =  906 error = 0.0073932489
+iteration =  907 error = 0.0073828261
+iteration =  908 error = 0.0073722651
+iteration =  909 error = 0.0073615647
+iteration =  910 error = 0.0073507237
+iteration =  911 error = 0.0073397413
+iteration =  912 error = 0.0073286171
+iteration =  913 error = 0.0073173511
+iteration =  914 error = 0.0073059436
+iteration =  915 error = 0.0072943956
+iteration =  916 error = 0.0072827084
+iteration =  917 error = 0.0072708837
+iteration =  918 error = 0.0072589240
+iteration =  919 error = 0.0072468321
+iteration =  920 error = 0.0072346115
+iteration =  921 error = 0.0072222658
+iteration =  922 error = 0.0072097995
+iteration =  923 error = 0.0071972172
+iteration =  924 error = 0.0071845239
+iteration =  925 error = 0.0071717249
+iteration =  926 error = 0.0071588254
+iteration =  927 error = 0.0071458311
+iteration =  928 error = 0.0071327472
+iteration =  929 error = 0.0071195789
+iteration =  930 error = 0.0071063314
+iteration =  931 error = 0.0070930091
+iteration =  932 error = 0.0070796164
+iteration =  933 error = 0.0070661570
+iteration =  934 error = 0.0070526340
+iteration =  935 error = 0.0070390502
+iteration =  936 error = 0.0070254077
+iteration =  937 error = 0.0070117080
+iteration =  938 error = 0.0069979523
+iteration =  939 error = 0.0069841413
+iteration =  940 error = 0.0069702750
+iteration =  941 error = 0.0069563537
+iteration =  942 error = 0.0069423768
+iteration =  943 error = 0.0069283439
+iteration =  944 error = 0.0069142544
+iteration =  945 error = 0.0069001076
+iteration =  946 error = 0.0068859029
+iteration =  947 error = 0.0068716397
+iteration =  948 error = 0.0068573175
+iteration =  949 error = 0.0068429358
+iteration =  950 error = 0.0068284945
+iteration =  951 error = 0.0068139934
+iteration =  952 error = 0.0067994327
+iteration =  953 error = 0.0067848125
+iteration =  954 error = 0.0067701334
+iteration =  955 error = 0.0067553960
+iteration =  956 error = 0.0067406010
+iteration =  957 error = 0.0067257494
+iteration =  958 error = 0.0067108424
+iteration =  959 error = 0.0066958812
+iteration =  960 error = 0.0066808672
+iteration =  961 error = 0.0066658020
+iteration =  962 error = 0.0066506872
+iteration =  963 error = 0.0066355246
+iteration =  964 error = 0.0066203162
+iteration =  965 error = 0.0066050639
+iteration =  966 error = 0.0065897699
+iteration =  967 error = 0.0065744364
+iteration =  968 error = 0.0065590656
+iteration =  969 error = 0.0065436599
+iteration =  970 error = 0.0065282219
+iteration =  971 error = 0.0065127539
+iteration =  972 error = 0.0064972587
+iteration =  973 error = 0.0064817389
+iteration =  974 error = 0.0064661972
+iteration =  975 error = 0.0064506362
+iteration =  976 error = 0.0064350593
+iteration =  977 error = 0.0064194683
+iteration =  978 error = 0.0064038683
+iteration =  979 error = 0.0063882578
+iteration =  980 error = 0.0063726491
+iteration =  981 error = 0.0063570258
+iteration =  982 error = 0.0063414345
+iteration =  983 error = 0.0063257899
+iteration =  984 error = 0.0063103247
+iteration =  985 error = 0.0062947011
+iteration =  986 error = 0.0062805251
+iteration =  987 error = 0.0062685654
+iteration =  988 error = 0.0062784184
+iteration =  989 error = 0.0063946595
+iteration =  990 error = 0.0069313649
+iteration =  991 error = 0.0140805702
+iteration =  992 error = 0.0140281278
+iteration =  993 error = 0.0091176242
+iteration =  994 error = 0.0083000223
+iteration =  995 error = 0.0069695491
+iteration =  996 error = 0.0066832629
+iteration =  997 error = 0.0065175152
+iteration =  998 error = 0.0063579841
+iteration =  999 error = 0.0062990502
+iteration = 1000 error = 0.0062309568
+nn> 

@@ -1,0 +1,12 @@
+CHECK filename data.level3.3/eval5-10.txt
+EVA o[0] = 0.04646, correct[0] = 0.1
+EVA o[1] = 0.74098, correct[1] = 0.1
+EVA o[2] = 0.00429, correct[2] = 0.1
+EVA o[3] = 0.36122, correct[3] = 0.1
+EVA o[4] = 0.22671, correct[4] = 0.1
+EVA o[5] = 0.20824, correct[5] = 0.9
+EVA o[6] = 0.02099, correct[6] = 0.1
+EVA o[7] = 0.33067, correct[7] = 0.1
+EVA o[8] = 0.04071, correct[8] = 0.1
+EVA o[9] = 0.02459, correct[9] = 0.1
+EVA sum_error = 2.31430

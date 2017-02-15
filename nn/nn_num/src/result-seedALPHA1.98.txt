@@ -1,0 +1,1208 @@
+teach[0] = 1000000000
+00000000000000000
+00011111111111100
+00000000100000000
+00111111111111100
+00100000100000100
+00101110101110100
+00100000100000100
+00101110101110100
+00100000100000100
+00000011111000000
+00001110001110000
+00111001110011100
+01110000000001110
+00001111111110000
+00000000100010000
+00000000100010000
+00000000100110000
+00000000100000000
+00000000000000000
+teach[1] = 0100000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[2] = 0010000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00011111111111000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[3] = 0001000000
+00000000000000000
+00000000000000000
+00000000000000000
+00111111111111100
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+00001111111110000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[4] = 0000100000
+00000000000000000
+00000000000000000
+00000000000000000
+01111111111111110
+01000010010000010
+01000010010000010
+01000100010000010
+01000100010001010
+01001000001111010
+01110000000000010
+01000000000000010
+01000000000000010
+01000000000000010
+01000000000000010
+01111111111111110
+01000000000000010
+00000000000000000
+00000000000000000
+00000000000000000
+teach[5] = 0000010000
+00000000000000000
+00000000000000000
+00000000000000000
+00111111111111100
+00000000100000000
+00000000100000000
+00000000100000000
+00000001000000000
+00000001000000000
+00001111111110000
+00000010000010000
+00000100000010000
+00000100000010000
+00001000000010000
+01111111111111110
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[6] = 0000001000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000100000000
+00000000100000000
+00111111111111100
+00000000000000000
+00000110000100000
+00000100000100000
+00001100000110000
+00011000000011000
+00011000000011000
+00110000000001100
+01100000000000110
+01100000000000110
+01000000000000010
+00000000000000000
+00000000000000000
+00000000000000000
+teach[7] = 0000000100
+00000000000000000
+00000000000000000
+00000000000000000
+00010000000000000
+00010000000000000
+00010000000111110
+00010001111000000
+00011110000000000
+00110000000000000
+01010000000000000
+00010000000000000
+00010000000001000
+00010000000001000
+00010000000001000
+00011111111110000
+00000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+teach[8] = 0000000010
+00000000000000000
+00000000000000000
+00000000000000000
+00000001111000000
+00000000001000000
+00000010001000000
+00000010001000000
+00000110000100000
+00000100000100000
+00001100000110000
+00011000000011000
+00011000000011000
+00110000000001100
+01100000000000110
+01100000000000110
+01000000000000010
+00000000000000000
+00000000000000000
+00000000000000000
+teach[9] = 0000000001
+00000000000000000
+00000000000000000
+00000001000000000
+00000001000000000
+00111111111100000
+00000011000100000
+00000010000100000
+00000110000100000
+00000100000100000
+00001100000100000
+00011000000100000
+00011000000100000
+00110000000100100
+01100000000100100
+01100000000111000
+01000000000000000
+00000000000000000
+00000000000000000
+00000000000000000
+  ===== USAGE =====
+  learn: nn> l
+  check: nn> c
+  evaluation: nn> e
+       after that, input filename defined test-pattern
+  =================
+nn> 
+iteration =    1 error = 0.7499863974
+iteration =    2 error = 0.7698780125
+iteration =    3 error = 0.7698780125
+iteration =    4 error = 0.7698780125
+iteration =    5 error = 0.7698780125
+iteration =    6 error = 0.7698780125
+iteration =    7 error = 0.7698780125
+iteration =    8 error = 0.7698780125
+iteration =    9 error = 0.7698780125
+iteration =   10 error = 0.7698780125
+iteration =   11 error = 0.7698780125
+iteration =   12 error = 0.7698780125
+iteration =   13 error = 0.7698780125
+iteration =   14 error = 0.7698780125
+iteration =   15 error = 0.7698780125
+iteration =   16 error = 0.7698780125
+iteration =   17 error = 0.7698780125
+iteration =   18 error = 0.7698780125
+iteration =   19 error = 0.7698780125
+iteration =   20 error = 0.7698780125
+iteration =   21 error = 0.7698780125
+iteration =   22 error = 0.7698780125
+iteration =   23 error = 0.7698780125
+iteration =   24 error = 0.7698780125
+iteration =   25 error = 0.7698780125
+iteration =   26 error = 0.7698780125
+iteration =   27 error = 0.7698780125
+iteration =   28 error = 0.7698780125
+iteration =   29 error = 0.7698780125
+iteration =   30 error = 0.7698780125
+iteration =   31 error = 0.7698780125
+iteration =   32 error = 0.7698780125
+iteration =   33 error = 0.7698780125
+iteration =   34 error = 0.7698780125
+iteration =   35 error = 0.7698780125
+iteration =   36 error = 0.7698780125
+iteration =   37 error = 0.7698780125
+iteration =   38 error = 0.7698780125
+iteration =   39 error = 0.7698780125
+iteration =   40 error = 0.7698780125
+iteration =   41 error = 0.7698780125
+iteration =   42 error = 0.7698780125
+iteration =   43 error = 0.7698780125
+iteration =   44 error = 0.7698780125
+iteration =   45 error = 0.7698780125
+iteration =   46 error = 0.7698780125
+iteration =   47 error = 0.7698780125
+iteration =   48 error = 0.7698780125
+iteration =   49 error = 0.7698780125
+iteration =   50 error = 0.7698780125
+iteration =   51 error = 0.7698780125
+iteration =   52 error = 0.7698780125
+iteration =   53 error = 0.7698780125
+iteration =   54 error = 0.7698780125
+iteration =   55 error = 0.7698780125
+iteration =   56 error = 0.7698780125
+iteration =   57 error = 0.7698780125
+iteration =   58 error = 0.7698780125
+iteration =   59 error = 0.7698780125
+iteration =   60 error = 0.7698780125
+iteration =   61 error = 0.7698780125
+iteration =   62 error = 0.7698780125
+iteration =   63 error = 0.7698780125
+iteration =   64 error = 0.7698780125
+iteration =   65 error = 0.7698780125
+iteration =   66 error = 0.7698780125
+iteration =   67 error = 0.7698780125
+iteration =   68 error = 0.7698780125
+iteration =   69 error = 0.7698780125
+iteration =   70 error = 0.7698780125
+iteration =   71 error = 0.7698780125
+iteration =   72 error = 0.7698780125
+iteration =   73 error = 0.7698780125
+iteration =   74 error = 0.7698780125
+iteration =   75 error = 0.7698780125
+iteration =   76 error = 0.7698780125
+iteration =   77 error = 0.7698780125
+iteration =   78 error = 0.7698780125
+iteration =   79 error = 0.7698780125
+iteration =   80 error = 0.7698780125
+iteration =   81 error = 0.7698780125
+iteration =   82 error = 0.7698780125
+iteration =   83 error = 0.7698780125
+iteration =   84 error = 0.7698780125
+iteration =   85 error = 0.7698780125
+iteration =   86 error = 0.7698780125
+iteration =   87 error = 0.7698780125
+iteration =   88 error = 0.7698780125
+iteration =   89 error = 0.7698780125
+iteration =   90 error = 0.7698780125
+iteration =   91 error = 0.7698780125
+iteration =   92 error = 0.7698780125
+iteration =   93 error = 0.7698780125
+iteration =   94 error = 0.7698780125
+iteration =   95 error = 0.7698780125
+iteration =   96 error = 0.7698780125
+iteration =   97 error = 0.7698780125
+iteration =   98 error = 0.7698780125
+iteration =   99 error = 0.7698780125
+iteration =  100 error = 0.7698780125
+iteration =  101 error = 0.7698780125
+iteration =  102 error = 0.7698780125
+iteration =  103 error = 0.7698780125
+iteration =  104 error = 0.7698780125
+iteration =  105 error = nan
+iteration =  106 error = nan
+iteration =  107 error = nan
+iteration =  108 error = nan
+iteration =  109 error = nan
+iteration =  110 error = nan
+iteration =  111 error = nan
+iteration =  112 error = nan
+iteration =  113 error = nan
+iteration =  114 error = nan
+iteration =  115 error = nan
+iteration =  116 error = nan
+iteration =  117 error = nan
+iteration =  118 error = nan
+iteration =  119 error = nan
+iteration =  120 error = nan
+iteration =  121 error = nan
+iteration =  122 error = nan
+iteration =  123 error = nan
+iteration =  124 error = nan
+iteration =  125 error = nan
+iteration =  126 error = nan
+iteration =  127 error = nan
+iteration =  128 error = nan
+iteration =  129 error = nan
+iteration =  130 error = nan
+iteration =  131 error = nan
+iteration =  132 error = nan
+iteration =  133 error = nan
+iteration =  134 error = nan
+iteration =  135 error = nan
+iteration =  136 error = nan
+iteration =  137 error = nan
+iteration =  138 error = nan
+iteration =  139 error = nan
+iteration =  140 error = nan
+iteration =  141 error = nan
+iteration =  142 error = nan
+iteration =  143 error = nan
+iteration =  144 error = nan
+iteration =  145 error = nan
+iteration =  146 error = nan
+iteration =  147 error = nan
+iteration =  148 error = nan
+iteration =  149 error = nan
+iteration =  150 error = nan
+iteration =  151 error = nan
+iteration =  152 error = nan
+iteration =  153 error = nan
+iteration =  154 error = nan
+iteration =  155 error = nan
+iteration =  156 error = nan
+iteration =  157 error = nan
+iteration =  158 error = nan
+iteration =  159 error = nan
+iteration =  160 error = nan
+iteration =  161 error = nan
+iteration =  162 error = nan
+iteration =  163 error = nan
+iteration =  164 error = nan
+iteration =  165 error = nan
+iteration =  166 error = nan
+iteration =  167 error = nan
+iteration =  168 error = nan
+iteration =  169 error = nan
+iteration =  170 error = nan
+iteration =  171 error = nan
+iteration =  172 error = nan
+iteration =  173 error = nan
+iteration =  174 error = nan
+iteration =  175 error = nan
+iteration =  176 error = nan
+iteration =  177 error = nan
+iteration =  178 error = nan
+iteration =  179 error = nan
+iteration =  180 error = nan
+iteration =  181 error = nan
+iteration =  182 error = nan
+iteration =  183 error = nan
+iteration =  184 error = nan
+iteration =  185 error = nan
+iteration =  186 error = nan
+iteration =  187 error = nan
+iteration =  188 error = nan
+iteration =  189 error = nan
+iteration =  190 error = nan
+iteration =  191 error = nan
+iteration =  192 error = nan
+iteration =  193 error = nan
+iteration =  194 error = nan
+iteration =  195 error = nan
+iteration =  196 error = nan
+iteration =  197 error = nan
+iteration =  198 error = nan
+iteration =  199 error = nan
+iteration =  200 error = nan
+iteration =  201 error = nan
+iteration =  202 error = nan
+iteration =  203 error = nan
+iteration =  204 error = nan
+iteration =  205 error = nan
+iteration =  206 error = nan
+iteration =  207 error = nan
+iteration =  208 error = nan
+iteration =  209 error = nan
+iteration =  210 error = nan
+iteration =  211 error = nan
+iteration =  212 error = nan
+iteration =  213 error = nan
+iteration =  214 error = nan
+iteration =  215 error = nan
+iteration =  216 error = nan
+iteration =  217 error = nan
+iteration =  218 error = nan
+iteration =  219 error = nan
+iteration =  220 error = nan
+iteration =  221 error = nan
+iteration =  222 error = nan
+iteration =  223 error = nan
+iteration =  224 error = nan
+iteration =  225 error = nan
+iteration =  226 error = nan
+iteration =  227 error = nan
+iteration =  228 error = nan
+iteration =  229 error = nan
+iteration =  230 error = nan
+iteration =  231 error = nan
+iteration =  232 error = nan
+iteration =  233 error = nan
+iteration =  234 error = nan
+iteration =  235 error = nan
+iteration =  236 error = nan
+iteration =  237 error = nan
+iteration =  238 error = nan
+iteration =  239 error = nan
+iteration =  240 error = nan
+iteration =  241 error = nan
+iteration =  242 error = nan
+iteration =  243 error = nan
+iteration =  244 error = nan
+iteration =  245 error = nan
+iteration =  246 error = nan
+iteration =  247 error = nan
+iteration =  248 error = nan
+iteration =  249 error = nan
+iteration =  250 error = nan
+iteration =  251 error = nan
+iteration =  252 error = nan
+iteration =  253 error = nan
+iteration =  254 error = nan
+iteration =  255 error = nan
+iteration =  256 error = nan
+iteration =  257 error = nan
+iteration =  258 error = nan
+iteration =  259 error = nan
+iteration =  260 error = nan
+iteration =  261 error = nan
+iteration =  262 error = nan
+iteration =  263 error = nan
+iteration =  264 error = nan
+iteration =  265 error = nan
+iteration =  266 error = nan
+iteration =  267 error = nan
+iteration =  268 error = nan
+iteration =  269 error = nan
+iteration =  270 error = nan
+iteration =  271 error = nan
+iteration =  272 error = nan
+iteration =  273 error = nan
+iteration =  274 error = nan
+iteration =  275 error = nan
+iteration =  276 error = nan
+iteration =  277 error = nan
+iteration =  278 error = nan
+iteration =  279 error = nan
+iteration =  280 error = nan
+iteration =  281 error = nan
+iteration =  282 error = nan
+iteration =  283 error = nan
+iteration =  284 error = nan
+iteration =  285 error = nan
+iteration =  286 error = nan
+iteration =  287 error = nan
+iteration =  288 error = nan
+iteration =  289 error = nan
+iteration =  290 error = nan
+iteration =  291 error = nan
+iteration =  292 error = nan
+iteration =  293 error = nan
+iteration =  294 error = nan
+iteration =  295 error = nan
+iteration =  296 error = nan
+iteration =  297 error = nan
+iteration =  298 error = nan
+iteration =  299 error = nan
+iteration =  300 error = nan
+iteration =  301 error = nan
+iteration =  302 error = nan
+iteration =  303 error = nan
+iteration =  304 error = nan
+iteration =  305 error = nan
+iteration =  306 error = nan
+iteration =  307 error = nan
+iteration =  308 error = nan
+iteration =  309 error = nan
+iteration =  310 error = nan
+iteration =  311 error = nan
+iteration =  312 error = nan
+iteration =  313 error = nan
+iteration =  314 error = nan
+iteration =  315 error = nan
+iteration =  316 error = nan
+iteration =  317 error = nan
+iteration =  318 error = nan
+iteration =  319 error = nan
+iteration =  320 error = nan
+iteration =  321 error = nan
+iteration =  322 error = nan
+iteration =  323 error = nan
+iteration =  324 error = nan
+iteration =  325 error = nan
+iteration =  326 error = nan
+iteration =  327 error = nan
+iteration =  328 error = nan
+iteration =  329 error = nan
+iteration =  330 error = nan
+iteration =  331 error = nan
+iteration =  332 error = nan
+iteration =  333 error = nan
+iteration =  334 error = nan
+iteration =  335 error = nan
+iteration =  336 error = nan
+iteration =  337 error = nan
+iteration =  338 error = nan
+iteration =  339 error = nan
+iteration =  340 error = nan
+iteration =  341 error = nan
+iteration =  342 error = nan
+iteration =  343 error = nan
+iteration =  344 error = nan
+iteration =  345 error = nan
+iteration =  346 error = nan
+iteration =  347 error = nan
+iteration =  348 error = nan
+iteration =  349 error = nan
+iteration =  350 error = nan
+iteration =  351 error = nan
+iteration =  352 error = nan
+iteration =  353 error = nan
+iteration =  354 error = nan
+iteration =  355 error = nan
+iteration =  356 error = nan
+iteration =  357 error = nan
+iteration =  358 error = nan
+iteration =  359 error = nan
+iteration =  360 error = nan
+iteration =  361 error = nan
+iteration =  362 error = nan
+iteration =  363 error = nan
+iteration =  364 error = nan
+iteration =  365 error = nan
+iteration =  366 error = nan
+iteration =  367 error = nan
+iteration =  368 error = nan
+iteration =  369 error = nan
+iteration =  370 error = nan
+iteration =  371 error = nan
+iteration =  372 error = nan
+iteration =  373 error = nan
+iteration =  374 error = nan
+iteration =  375 error = nan
+iteration =  376 error = nan
+iteration =  377 error = nan
+iteration =  378 error = nan
+iteration =  379 error = nan
+iteration =  380 error = nan
+iteration =  381 error = nan
+iteration =  382 error = nan
+iteration =  383 error = nan
+iteration =  384 error = nan
+iteration =  385 error = nan
+iteration =  386 error = nan
+iteration =  387 error = nan
+iteration =  388 error = nan
+iteration =  389 error = nan
+iteration =  390 error = nan
+iteration =  391 error = nan
+iteration =  392 error = nan
+iteration =  393 error = nan
+iteration =  394 error = nan
+iteration =  395 error = nan
+iteration =  396 error = nan
+iteration =  397 error = nan
+iteration =  398 error = nan
+iteration =  399 error = nan
+iteration =  400 error = nan
+iteration =  401 error = nan
+iteration =  402 error = nan
+iteration =  403 error = nan
+iteration =  404 error = nan
+iteration =  405 error = nan
+iteration =  406 error = nan
+iteration =  407 error = nan
+iteration =  408 error = nan
+iteration =  409 error = nan
+iteration =  410 error = nan
+iteration =  411 error = nan
+iteration =  412 error = nan
+iteration =  413 error = nan
+iteration =  414 error = nan
+iteration =  415 error = nan
+iteration =  416 error = nan
+iteration =  417 error = nan
+iteration =  418 error = nan
+iteration =  419 error = nan
+iteration =  420 error = nan
+iteration =  421 error = nan
+iteration =  422 error = nan
+iteration =  423 error = nan
+iteration =  424 error = nan
+iteration =  425 error = nan
+iteration =  426 error = nan
+iteration =  427 error = nan
+iteration =  428 error = nan
+iteration =  429 error = nan
+iteration =  430 error = nan
+iteration =  431 error = nan
+iteration =  432 error = nan
+iteration =  433 error = nan
+iteration =  434 error = nan
+iteration =  435 error = nan
+iteration =  436 error = nan
+iteration =  437 error = nan
+iteration =  438 error = nan
+iteration =  439 error = nan
+iteration =  440 error = nan
+iteration =  441 error = nan
+iteration =  442 error = nan
+iteration =  443 error = nan
+iteration =  444 error = nan
+iteration =  445 error = nan
+iteration =  446 error = nan
+iteration =  447 error = nan
+iteration =  448 error = nan
+iteration =  449 error = nan
+iteration =  450 error = nan
+iteration =  451 error = nan
+iteration =  452 error = nan
+iteration =  453 error = nan
+iteration =  454 error = nan
+iteration =  455 error = nan
+iteration =  456 error = nan
+iteration =  457 error = nan
+iteration =  458 error = nan
+iteration =  459 error = nan
+iteration =  460 error = nan
+iteration =  461 error = nan
+iteration =  462 error = nan
+iteration =  463 error = nan
+iteration =  464 error = nan
+iteration =  465 error = nan
+iteration =  466 error = nan
+iteration =  467 error = nan
+iteration =  468 error = nan
+iteration =  469 error = nan
+iteration =  470 error = nan
+iteration =  471 error = nan
+iteration =  472 error = nan
+iteration =  473 error = nan
+iteration =  474 error = nan
+iteration =  475 error = nan
+iteration =  476 error = nan
+iteration =  477 error = nan
+iteration =  478 error = nan
+iteration =  479 error = nan
+iteration =  480 error = nan
+iteration =  481 error = nan
+iteration =  482 error = nan
+iteration =  483 error = nan
+iteration =  484 error = nan
+iteration =  485 error = nan
+iteration =  486 error = nan
+iteration =  487 error = nan
+iteration =  488 error = nan
+iteration =  489 error = nan
+iteration =  490 error = nan
+iteration =  491 error = nan
+iteration =  492 error = nan
+iteration =  493 error = nan
+iteration =  494 error = nan
+iteration =  495 error = nan
+iteration =  496 error = nan
+iteration =  497 error = nan
+iteration =  498 error = nan
+iteration =  499 error = nan
+iteration =  500 error = nan
+iteration =  501 error = nan
+iteration =  502 error = nan
+iteration =  503 error = nan
+iteration =  504 error = nan
+iteration =  505 error = nan
+iteration =  506 error = nan
+iteration =  507 error = nan
+iteration =  508 error = nan
+iteration =  509 error = nan
+iteration =  510 error = nan
+iteration =  511 error = nan
+iteration =  512 error = nan
+iteration =  513 error = nan
+iteration =  514 error = nan
+iteration =  515 error = nan
+iteration =  516 error = nan
+iteration =  517 error = nan
+iteration =  518 error = nan
+iteration =  519 error = nan
+iteration =  520 error = nan
+iteration =  521 error = nan
+iteration =  522 error = nan
+iteration =  523 error = nan
+iteration =  524 error = nan
+iteration =  525 error = nan
+iteration =  526 error = nan
+iteration =  527 error = nan
+iteration =  528 error = nan
+iteration =  529 error = nan
+iteration =  530 error = nan
+iteration =  531 error = nan
+iteration =  532 error = nan
+iteration =  533 error = nan
+iteration =  534 error = nan
+iteration =  535 error = nan
+iteration =  536 error = nan
+iteration =  537 error = nan
+iteration =  538 error = nan
+iteration =  539 error = nan
+iteration =  540 error = nan
+iteration =  541 error = nan
+iteration =  542 error = nan
+iteration =  543 error = nan
+iteration =  544 error = nan
+iteration =  545 error = nan
+iteration =  546 error = nan
+iteration =  547 error = nan
+iteration =  548 error = nan
+iteration =  549 error = nan
+iteration =  550 error = nan
+iteration =  551 error = nan
+iteration =  552 error = nan
+iteration =  553 error = nan
+iteration =  554 error = nan
+iteration =  555 error = nan
+iteration =  556 error = nan
+iteration =  557 error = nan
+iteration =  558 error = nan
+iteration =  559 error = nan
+iteration =  560 error = nan
+iteration =  561 error = nan
+iteration =  562 error = nan
+iteration =  563 error = nan
+iteration =  564 error = nan
+iteration =  565 error = nan
+iteration =  566 error = nan
+iteration =  567 error = nan
+iteration =  568 error = nan
+iteration =  569 error = nan
+iteration =  570 error = nan
+iteration =  571 error = nan
+iteration =  572 error = nan
+iteration =  573 error = nan
+iteration =  574 error = nan
+iteration =  575 error = nan
+iteration =  576 error = nan
+iteration =  577 error = nan
+iteration =  578 error = nan
+iteration =  579 error = nan
+iteration =  580 error = nan
+iteration =  581 error = nan
+iteration =  582 error = nan
+iteration =  583 error = nan
+iteration =  584 error = nan
+iteration =  585 error = nan
+iteration =  586 error = nan
+iteration =  587 error = nan
+iteration =  588 error = nan
+iteration =  589 error = nan
+iteration =  590 error = nan
+iteration =  591 error = nan
+iteration =  592 error = nan
+iteration =  593 error = nan
+iteration =  594 error = nan
+iteration =  595 error = nan
+iteration =  596 error = nan
+iteration =  597 error = nan
+iteration =  598 error = nan
+iteration =  599 error = nan
+iteration =  600 error = nan
+iteration =  601 error = nan
+iteration =  602 error = nan
+iteration =  603 error = nan
+iteration =  604 error = nan
+iteration =  605 error = nan
+iteration =  606 error = nan
+iteration =  607 error = nan
+iteration =  608 error = nan
+iteration =  609 error = nan
+iteration =  610 error = nan
+iteration =  611 error = nan
+iteration =  612 error = nan
+iteration =  613 error = nan
+iteration =  614 error = nan
+iteration =  615 error = nan
+iteration =  616 error = nan
+iteration =  617 error = nan
+iteration =  618 error = nan
+iteration =  619 error = nan
+iteration =  620 error = nan
+iteration =  621 error = nan
+iteration =  622 error = nan
+iteration =  623 error = nan
+iteration =  624 error = nan
+iteration =  625 error = nan
+iteration =  626 error = nan
+iteration =  627 error = nan
+iteration =  628 error = nan
+iteration =  629 error = nan
+iteration =  630 error = nan
+iteration =  631 error = nan
+iteration =  632 error = nan
+iteration =  633 error = nan
+iteration =  634 error = nan
+iteration =  635 error = nan
+iteration =  636 error = nan
+iteration =  637 error = nan
+iteration =  638 error = nan
+iteration =  639 error = nan
+iteration =  640 error = nan
+iteration =  641 error = nan
+iteration =  642 error = nan
+iteration =  643 error = nan
+iteration =  644 error = nan
+iteration =  645 error = nan
+iteration =  646 error = nan
+iteration =  647 error = nan
+iteration =  648 error = nan
+iteration =  649 error = nan
+iteration =  650 error = nan
+iteration =  651 error = nan
+iteration =  652 error = nan
+iteration =  653 error = nan
+iteration =  654 error = nan
+iteration =  655 error = nan
+iteration =  656 error = nan
+iteration =  657 error = nan
+iteration =  658 error = nan
+iteration =  659 error = nan
+iteration =  660 error = nan
+iteration =  661 error = nan
+iteration =  662 error = nan
+iteration =  663 error = nan
+iteration =  664 error = nan
+iteration =  665 error = nan
+iteration =  666 error = nan
+iteration =  667 error = nan
+iteration =  668 error = nan
+iteration =  669 error = nan
+iteration =  670 error = nan
+iteration =  671 error = nan
+iteration =  672 error = nan
+iteration =  673 error = nan
+iteration =  674 error = nan
+iteration =  675 error = nan
+iteration =  676 error = nan
+iteration =  677 error = nan
+iteration =  678 error = nan
+iteration =  679 error = nan
+iteration =  680 error = nan
+iteration =  681 error = nan
+iteration =  682 error = nan
+iteration =  683 error = nan
+iteration =  684 error = nan
+iteration =  685 error = nan
+iteration =  686 error = nan
+iteration =  687 error = nan
+iteration =  688 error = nan
+iteration =  689 error = nan
+iteration =  690 error = nan
+iteration =  691 error = nan
+iteration =  692 error = nan
+iteration =  693 error = nan
+iteration =  694 error = nan
+iteration =  695 error = nan
+iteration =  696 error = nan
+iteration =  697 error = nan
+iteration =  698 error = nan
+iteration =  699 error = nan
+iteration =  700 error = nan
+iteration =  701 error = nan
+iteration =  702 error = nan
+iteration =  703 error = nan
+iteration =  704 error = nan
+iteration =  705 error = nan
+iteration =  706 error = nan
+iteration =  707 error = nan
+iteration =  708 error = nan
+iteration =  709 error = nan
+iteration =  710 error = nan
+iteration =  711 error = nan
+iteration =  712 error = nan
+iteration =  713 error = nan
+iteration =  714 error = nan
+iteration =  715 error = nan
+iteration =  716 error = nan
+iteration =  717 error = nan
+iteration =  718 error = nan
+iteration =  719 error = nan
+iteration =  720 error = nan
+iteration =  721 error = nan
+iteration =  722 error = nan
+iteration =  723 error = nan
+iteration =  724 error = nan
+iteration =  725 error = nan
+iteration =  726 error = nan
+iteration =  727 error = nan
+iteration =  728 error = nan
+iteration =  729 error = nan
+iteration =  730 error = nan
+iteration =  731 error = nan
+iteration =  732 error = nan
+iteration =  733 error = nan
+iteration =  734 error = nan
+iteration =  735 error = nan
+iteration =  736 error = nan
+iteration =  737 error = nan
+iteration =  738 error = nan
+iteration =  739 error = nan
+iteration =  740 error = nan
+iteration =  741 error = nan
+iteration =  742 error = nan
+iteration =  743 error = nan
+iteration =  744 error = nan
+iteration =  745 error = nan
+iteration =  746 error = nan
+iteration =  747 error = nan
+iteration =  748 error = nan
+iteration =  749 error = nan
+iteration =  750 error = nan
+iteration =  751 error = nan
+iteration =  752 error = nan
+iteration =  753 error = nan
+iteration =  754 error = nan
+iteration =  755 error = nan
+iteration =  756 error = nan
+iteration =  757 error = nan
+iteration =  758 error = nan
+iteration =  759 error = nan
+iteration =  760 error = nan
+iteration =  761 error = nan
+iteration =  762 error = nan
+iteration =  763 error = nan
+iteration =  764 error = nan
+iteration =  765 error = nan
+iteration =  766 error = nan
+iteration =  767 error = nan
+iteration =  768 error = nan
+iteration =  769 error = nan
+iteration =  770 error = nan
+iteration =  771 error = nan
+iteration =  772 error = nan
+iteration =  773 error = nan
+iteration =  774 error = nan
+iteration =  775 error = nan
+iteration =  776 error = nan
+iteration =  777 error = nan
+iteration =  778 error = nan
+iteration =  779 error = nan
+iteration =  780 error = nan
+iteration =  781 error = nan
+iteration =  782 error = nan
+iteration =  783 error = nan
+iteration =  784 error = nan
+iteration =  785 error = nan
+iteration =  786 error = nan
+iteration =  787 error = nan
+iteration =  788 error = nan
+iteration =  789 error = nan
+iteration =  790 error = nan
+iteration =  791 error = nan
+iteration =  792 error = nan
+iteration =  793 error = nan
+iteration =  794 error = nan
+iteration =  795 error = nan
+iteration =  796 error = nan
+iteration =  797 error = nan
+iteration =  798 error = nan
+iteration =  799 error = nan
+iteration =  800 error = nan
+iteration =  801 error = nan
+iteration =  802 error = nan
+iteration =  803 error = nan
+iteration =  804 error = nan
+iteration =  805 error = nan
+iteration =  806 error = nan
+iteration =  807 error = nan
+iteration =  808 error = nan
+iteration =  809 error = nan
+iteration =  810 error = nan
+iteration =  811 error = nan
+iteration =  812 error = nan
+iteration =  813 error = nan
+iteration =  814 error = nan
+iteration =  815 error = nan
+iteration =  816 error = nan
+iteration =  817 error = nan
+iteration =  818 error = nan
+iteration =  819 error = nan
+iteration =  820 error = nan
+iteration =  821 error = nan
+iteration =  822 error = nan
+iteration =  823 error = nan
+iteration =  824 error = nan
+iteration =  825 error = nan
+iteration =  826 error = nan
+iteration =  827 error = nan
+iteration =  828 error = nan
+iteration =  829 error = nan
+iteration =  830 error = nan
+iteration =  831 error = nan
+iteration =  832 error = nan
+iteration =  833 error = nan
+iteration =  834 error = nan
+iteration =  835 error = nan
+iteration =  836 error = nan
+iteration =  837 error = nan
+iteration =  838 error = nan
+iteration =  839 error = nan
+iteration =  840 error = nan
+iteration =  841 error = nan
+iteration =  842 error = nan
+iteration =  843 error = nan
+iteration =  844 error = nan
+iteration =  845 error = nan
+iteration =  846 error = nan
+iteration =  847 error = nan
+iteration =  848 error = nan
+iteration =  849 error = nan
+iteration =  850 error = nan
+iteration =  851 error = nan
+iteration =  852 error = nan
+iteration =  853 error = nan
+iteration =  854 error = nan
+iteration =  855 error = nan
+iteration =  856 error = nan
+iteration =  857 error = nan
+iteration =  858 error = nan
+iteration =  859 error = nan
+iteration =  860 error = nan
+iteration =  861 error = nan
+iteration =  862 error = nan
+iteration =  863 error = nan
+iteration =  864 error = nan
+iteration =  865 error = nan
+iteration =  866 error = nan
+iteration =  867 error = nan
+iteration =  868 error = nan
+iteration =  869 error = nan
+iteration =  870 error = nan
+iteration =  871 error = nan
+iteration =  872 error = nan
+iteration =  873 error = nan
+iteration =  874 error = nan
+iteration =  875 error = nan
+iteration =  876 error = nan
+iteration =  877 error = nan
+iteration =  878 error = nan
+iteration =  879 error = nan
+iteration =  880 error = nan
+iteration =  881 error = nan
+iteration =  882 error = nan
+iteration =  883 error = nan
+iteration =  884 error = nan
+iteration =  885 error = nan
+iteration =  886 error = nan
+iteration =  887 error = nan
+iteration =  888 error = nan
+iteration =  889 error = nan
+iteration =  890 error = nan
+iteration =  891 error = nan
+iteration =  892 error = nan
+iteration =  893 error = nan
+iteration =  894 error = nan
+iteration =  895 error = nan
+iteration =  896 error = nan
+iteration =  897 error = nan
+iteration =  898 error = nan
+iteration =  899 error = nan
+iteration =  900 error = nan
+iteration =  901 error = nan
+iteration =  902 error = nan
+iteration =  903 error = nan
+iteration =  904 error = nan
+iteration =  905 error = nan
+iteration =  906 error = nan
+iteration =  907 error = nan
+iteration =  908 error = nan
+iteration =  909 error = nan
+iteration =  910 error = nan
+iteration =  911 error = nan
+iteration =  912 error = nan
+iteration =  913 error = nan
+iteration =  914 error = nan
+iteration =  915 error = nan
+iteration =  916 error = nan
+iteration =  917 error = nan
+iteration =  918 error = nan
+iteration =  919 error = nan
+iteration =  920 error = nan
+iteration =  921 error = nan
+iteration =  922 error = nan
+iteration =  923 error = nan
+iteration =  924 error = nan
+iteration =  925 error = nan
+iteration =  926 error = nan
+iteration =  927 error = nan
+iteration =  928 error = nan
+iteration =  929 error = nan
+iteration =  930 error = nan
+iteration =  931 error = nan
+iteration =  932 error = nan
+iteration =  933 error = nan
+iteration =  934 error = nan
+iteration =  935 error = nan
+iteration =  936 error = nan
+iteration =  937 error = nan
+iteration =  938 error = nan
+iteration =  939 error = nan
+iteration =  940 error = nan
+iteration =  941 error = nan
+iteration =  942 error = nan
+iteration =  943 error = nan
+iteration =  944 error = nan
+iteration =  945 error = nan
+iteration =  946 error = nan
+iteration =  947 error = nan
+iteration =  948 error = nan
+iteration =  949 error = nan
+iteration =  950 error = nan
+iteration =  951 error = nan
+iteration =  952 error = nan
+iteration =  953 error = nan
+iteration =  954 error = nan
+iteration =  955 error = nan
+iteration =  956 error = nan
+iteration =  957 error = nan
+iteration =  958 error = nan
+iteration =  959 error = nan
+iteration =  960 error = nan
+iteration =  961 error = nan
+iteration =  962 error = nan
+iteration =  963 error = nan
+iteration =  964 error = nan
+iteration =  965 error = nan
+iteration =  966 error = nan
+iteration =  967 error = nan
+iteration =  968 error = nan
+iteration =  969 error = nan
+iteration =  970 error = nan
+iteration =  971 error = nan
+iteration =  972 error = nan
+iteration =  973 error = nan
+iteration =  974 error = nan
+iteration =  975 error = nan
+iteration =  976 error = nan
+iteration =  977 error = nan
+iteration =  978 error = nan
+iteration =  979 error = nan
+iteration =  980 error = nan
+iteration =  981 error = nan
+iteration =  982 error = nan
+iteration =  983 error = nan
+iteration =  984 error = nan
+iteration =  985 error = nan
+iteration =  986 error = nan
+iteration =  987 error = nan
+iteration =  988 error = nan
+iteration =  989 error = nan
+iteration =  990 error = nan
+iteration =  991 error = nan
+iteration =  992 error = nan
+iteration =  993 error = nan
+iteration =  994 error = nan
+iteration =  995 error = nan
+iteration =  996 error = nan
+iteration =  997 error = nan
+iteration =  998 error = nan
+iteration =  999 error = nan
+iteration = 1000 error = nan
+nn> 

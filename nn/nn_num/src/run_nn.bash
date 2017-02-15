@@ -1,33 +1,34 @@
 #!/bin/bash
 
-# ¡ã³µÍ×¡ä
-# NN¤Ë¤è¤ë³Ø½¬¤ò¼Â¹Ô¤·¡¤
-# ¡¡1. ³Ø½¬¤ÎÍÍ»Ò¡Ê³Ø½¬¥¹¥Æ¥Ã¥×¿ôËè¤Î¸íº¹¿ä°Ü¿Þ¡Ë¤ä¡¤
-# ¡¡2. ³Ø½¬¸å¤Î³Ø½¬¥Ç¡¼¥¿¤ËÂÐ¤¹¤ë³Ø½¬ÅÙ¹ç¤¤¡¤
-# ¡¡3. ³Ø½¬¤ËÍÑ¤¤¤Ê¤«¤Ã¤¿¥Æ¥¹¥ÈÍÑ¥Ç¡¼¥¿¤ËÂÐ¤¹¤ëÉ¾²Á¡¤
-# ¤ò¹Ô¤¦¡ÊÍ½Äê¡Ë¡¥
+# ï¼œæ¦‚è¦ï¼ž
+# NNã«ã‚ˆã‚‹å­¦ç¿’ã‚’å®Ÿè¡Œã—ï¼Œ
+# ã€€1. å­¦ç¿’ã®æ§˜å­ï¼ˆå­¦ç¿’ã‚¹ãƒ†ãƒƒãƒ—æ•°æ¯Žã®èª¤å·®æŽ¨ç§»å›³ï¼‰ã‚„ï¼Œ
+# ã€€2. å­¦ç¿’å¾Œã®å­¦ç¿’ãƒ‡ãƒ¼ã‚¿ã«å¯¾ã™ã‚‹å­¦ç¿’åº¦åˆã„ï¼Œ
+# ã€€3. å­¦ç¿’ã«ç”¨ã„ãªã‹ã£ãŸãƒ†ã‚¹ãƒˆç”¨ãƒ‡ãƒ¼ã‚¿ã«å¯¾ã™ã‚‹è©•ä¾¡ï¼Œ
+# ã‚’è¡Œã†ï¼ˆäºˆå®šï¼‰ï¼Ž
 
-# ¡ã»È¤¤Êý¡ä
+# ï¼œä½¿ã„æ–¹ï¼ž
 # prompt> ./run_nn.bash $rand-seed
 
 EXE=nn_num
+TITLE=$1
 
 
-# ³Ø½¬¥¹¥Æ¥Ã¥×¿ôËè¤Î¸íº¹¿ä°Ü¿ÞºîÀ®
+# å­¦ç¿’ã‚¹ãƒ†ãƒƒãƒ—æ•°æ¯Žã®èª¤å·®æŽ¨ç§»å›³ä½œæˆ
 learning_fig() {
     datafile=`echo $STDOUT | sed s/txt/data/`
     figfile=`echo $STDOUT | sed s/txt/svg/`
     grep iteration $STDOUT | tr -s " " " " | cut -f3,6 -d" " > $datafile
     echo set xlabel \"iteration\" > .gnuplot
     echo set ylabel \"error\" >> .gnuplot
-    echo set title \"Error transition per iteration on BP-NN\" >> .gnuplot
-    echo set terminal svg >> .gnuplot
-    echo set output \"$figfile\" >> .gnuplot
+    echo set title \"Error transition per iteration on BP-NN at $TITLE\" >> .gnuplot
+    echo set terminal pdf >> .gnuplot
+    echo set output \"$TITLE.pdf\" >> .gnuplot
     echo plot \"$datafile\" with line >> .gnuplot
     gnuplot < .gnuplot
 }
 
-# 2. ³Ø½¬¸å¤Î³Ø½¬¥Ç¡¼¥¿¤ËÂÐ¤¹¤ë³Ø½¬ÅÙ¹ç¤¤
+# 2. å­¦ç¿’å¾Œã®å­¦ç¿’ãƒ‡ãƒ¼ã‚¿ã«å¯¾ã™ã‚‹å­¦ç¿’åº¦åˆã„
 learned_fig() {
     datafile=`echo $STDOUT | sed s/txt/learned/`
     grep CHECK $STDOUT | cut -f2- -d" " > $datafile
@@ -36,7 +37,7 @@ learned_fig() {
 
 if [ -e $EXE -a $# -eq 1 ] ; then
     STDOUT=result-seed$1.txt
-    ./$EXE $1 | tee $STDOUT
+    ./$EXE 1000 | tee $STDOUT
     learning_fig
     learned_fig
 else
