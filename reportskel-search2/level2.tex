@@ -1,12 +1,14 @@
 \subsection{階層型NNによる学習}
 \subsubsection{最適なパラメータを探すためのアプローチ}
 指定された条件下において学習が効率良く行われるパラメータの組み合わせを探
-すため、他の値をそのままにALPHAの値を0.1刻みで変更して最も収束にかかった回数の少ないものを求める。以降ALPHAをその値で固定して，ETAを0.1刻みで変更していき，最も収束にかかった回数の少ないものを求める。その後，HIDDENの上限を50にして1刻みで変更していき，最も収束にかかった回数の少ないものを求める。以上のようにすることで最も良いパラメータを調整した。
+すため、他の値をそのままにALPHAの値を0.1刻みで変更して最も収束にかかった回数の少ないものを求める。以降ALPHAをその値で固定して，ETAを0.1刻みで変更していき，最も収束にかかった回数の少ないものを求める。その後，HIDDENの上限を50にして1刻みで変更していき，最も収束にかかった回数の少ないものを求める。以上のようにすることで最も良いパラメータを調整した。HIDDENの総当たりの際に使用したスクリプトを以下に示す(ソースコード\ref{hidden}).
+
+\lstinputlisting[caption=lv2-HIDDEN.pl,label=hidden]{../nn/bp_mo/lv2-HIDDEN.pl}
 
 \subsubsection{実行結果}
 上記のアプローチのようにパラメータを求めた際，
 
-ALPHA=1.9，ETA=0.9，HIDDEN=15
+ETA=1.9，ALPHA=0.9，HIDDEN=15
 
 となった。
 
@@ -35,7 +37,7 @@ ALPHA=1.9，ETA=0.9，HIDDEN=15
 
 \begin{figure}[h]
  \begin{center}
-  \includegraphics[width=10.0cm,angle=-90]{figs/ave1.pdf}
+  \includegraphics[width=10.0cm,angle=-90]{figs/level2/ave1.pdf}
   \caption{重みを更新する様子（平均値）}
   \label{fig:level2}
  \end{center}
