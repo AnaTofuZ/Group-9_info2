@@ -114,13 +114,12 @@ int main(argc,argv)
 	  ih_w[j][i]+=ih_dw[j][i];
 	}
     }
-
-    fprintf(stdout,"%4d,%.10f\n",ite,err);
+    fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
     if((err<MIN_ERR)||(ite==ITERATIONS)){
       for(ctg=0;ctg<CTG;ctg++){
-//	fprintf(stdout,"ctg[%d] : ",ctg);
+	fprintf(stdout,"ctg[%d] : ",ctg);
 	for(i=0;i<INPUT;i++)
-//	  fprintf(stdout,"i[%d] = %1.1f  ",i,i_lay[ctg][i]);
+	  fprintf(stdout,"i[%d] = %1.1f  ",i,i_lay[ctg][i]);
 	for(j=0;j<HIDDEN;j++){
 	  for(i=0,sum=0.;i<=INPUT;i++)
 	    sum+=i_lay[ctg][i]*ih_w[i][j];
@@ -130,17 +129,17 @@ int main(argc,argv)
 	  for(i=0,sum=0.;i<=HIDDEN;i++)
 	    sum+=h_lay[i]*ho_w[i][j];
 	  o_lay[j]=sigmoid(sum);
-//	  fprintf(stdout,"o[%d] = %1.5f, t[%d] = %1.1f\n",j,o_lay[j],j,teach[ctg][j]);
+	  fprintf(stdout,"o[%d] = %1.5f, t[%d] = %1.1f\n",j,o_lay[j],j,teach[ctg][j]);
 	}
       }
-//     fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
+      fprintf(stdout,"iteration = %4d, error = %.10f\n",ite,err);
       break;
     }
   }
   if( err < MIN_ERR ){
-//    fprintf(stderr,"FINISH 2: iteration = %4d, error = %.10f\n",ite,err);
+    fprintf(stderr,"FINISH 2: iteration = %4d, error = %.10f\n",ite,err);
   }else if( ite <= ITERATIONS ){
-//   fprintf(stderr,"FINISH 1: iteration = %4d, error = %.10f\n",ite,err);
+    fprintf(stderr,"FINISH 1: iteration = %4d, error = %.10f\n",ite,err);
   }
 
   return 0;
